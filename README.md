@@ -201,8 +201,8 @@ Me interesa colaborar en proyectos que valoren la calidad del código, el trabaj
 
 Estoy abierto a oportunidades profesionales, proyectos y colaboraciones relacionadas con el desarrollo Full Stack.
 
-* **LinkedIn:** [Conectar conmigo](TU_ENLACE_DE_LINKEDIN)
-* **Correo electrónico:** [TU_CORREO_ELECTRONICO](mailto:TU_CORREO_ELECTRONICO)
+* **LinkedIn:** [Conectar conmigo](https://www.linkedin.com/in/alejandro-andrade-dev/)
+* **Correo electrónico:** [TU_CORREO_ELECTRONICO](mailto:andradegali1503@gmail.com)
 * **GitHub:** [andradegali1503-droid](https://github.com/andradegali1503-droid)
 
 <br>
