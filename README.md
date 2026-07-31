@@ -178,12 +178,11 @@ Aplicación frontend desarrollada con React, consumo de una API externa, navegac
 
 <div align="center">
 
-<img height="170" src="https://github-readme-stats.vercel.app/api?username=andradegali1503-droid&show_icons=true&hide_border=true&include_all_commits=true&count_private=true" alt="Estadísticas de GitHub">
+<a href="https://github.com/andradegali1503-droid"> <img width="48%" src="https://github-readme-stats.vercel.app/api?username=andradegali1503-droid&show_icons=true&hide_border=true&theme=tokyonight&locale=es" alt="Estadísticas del perfil de Alejandro Andrade" /> </a>
 
-<img height="170" src="https://github-readme-stats.vercel.app/api/top-langs/?username=andradegali1503-droid&layout=compact&hide_border=true&langs_count=8" alt="Lenguajes más utilizados">
+<a href="https://github.com/andradegali1503-droid"> <img width="37%" src="https://github-readme-stats.vercel.app/api/top-langs/?username=andradegali1503-droid&layout=compact&hide_border=true&theme=tokyonight&locale=es&langs_count=8" alt="Lenguajes más utilizados por Alejandro Andrade" /> </a>
 
 </div>
-
 ---
 
 ## 🚀 En qué puedo aportar
