@@ -174,24 +174,6 @@ Aplicación frontend desarrollada con React, consumo de una API externa, navegac
 
 ---
 
-## 📊 Estadísticas de GitHub
-
-<div align="center">
-
-<img
-height="180"
-src="https://github-stats-extended.vercel.app/api?username=andradegali1503-droid&show_icons=true&hide_border=true&theme=tokyonight&locale=es"
-alt="Estadísticas de GitHub de Alejandro Andrade"
-/>
-
-<img
-height="180"
-src="https://github-stats-extended.vercel.app/api/top-langs/?username=andradegali1503-droid&layout=compact&langs_count=8&hide_border=true&theme=tokyonight&locale=es"
-alt="Lenguajes más utilizados por Alejandro Andrade"
-/>
-
-</div>
-
 
 ## 🚀 En qué puedo aportar
 
