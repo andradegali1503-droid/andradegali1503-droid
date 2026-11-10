@@ -1,382 +1,402 @@
-body {
-    font-family: 'Roboto', sans-serif;  /* Tipografía más profesional */
-    background: #e0eafc;  /* Fondo con gradiente sutil */
-    background: -webkit-linear-gradient(to right, #cfdef3, #e0eafc);  
-    background: linear-gradient(to right, #cfdef3, #e0eafc);  
-    color: #2c3e50;
-    margin: 0;
-    padding: 0;
+/* ==========================================================================
+   ALI ALEJANDRO ANDRADE — CURRICULUM VITAE & CREDENTIALS VIEW (cv.css)
+   Extends ./style.css with CV layout, structured tables & @media print
+   ========================================================================== */
+
+@import url('./style.css');
+
+.cv-hero-banner {
+  background: #ffffff;
+  border: 3.5px solid var(--border-strong);
+  border-radius: var(--radius-sm);
+  padding: clamp(1.5rem, 3.5vw, 2.5rem);
+  box-shadow: var(--shadow-card);
+  margin-bottom: 2.25rem;
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  gap: 1.75rem;
+  align-items: center;
 }
 
-.container {
-    margin-top: 40px;
-    max-width: 1200px;
-    background-color: #ffffff;
-    border-radius: 12px;
-    padding: 30px;
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);  /* Sombra más suave y atractiva */
+.cv-avatar-wrap {
+  width: 112px;
+  height: 112px;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  border: 2px solid var(--border-highlight);
+  flex-shrink: 0;
+  background: var(--bg-canvas);
 }
 
-.profile-header {
-    text-align: center;
-    margin-bottom: 30px;
+.cv-avatar-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 20%;
 }
 
-.profile-header h1 {
-    color: #2c3e50;
-    font-weight: 700;
-    font-size: 2.5em;
+.cv-banner-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.55rem;
 }
 
-.profile-header p {
-    color: #7f8c8d;
-    font-style: italic;
-    font-size: 1.2em;
-    margin-top: 15px;
-    line-height: 1.5;
+.cv-banner-title {
+  font-family: var(--font-display);
+  font-size: var(--text-h1);
+  font-weight: 700;
+  line-height: 1.12;
+  color: var(--text-primary);
 }
 
-.section-title {
-    margin-top: 20px;
-    margin-bottom: 15px;
-    color: #34495e;
-    font-weight: 600;
-    border-bottom: 2px solid #e74c3c; /* Línea decorativa para títulos */
-    padding-bottom: 5px;
-    font-size: 1.5em;
+.cv-banner-role {
+  font-family: var(--font-mono);
+  font-size: var(--text-sm);
+  color: var(--accent-primary);
+  font-weight: 600;
 }
 
-.contact-info, .education, .experience, .skills, .courses, .skills-extended {
-    margin-bottom: 25px;
-    background-color: #f4f6f7;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+.cv-banner-summary {
+  font-size: var(--text-body);
+  color: var(--text-secondary);
+  max-width: 68ch;
 }
 
-ul {
-    list-style-type: none;
-    padding: 0;
-    line-height: 1.8;
+.cv-contact-strip {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.65rem 1.25rem;
+  padding-top: 0.4rem;
+  font-size: var(--text-sm);
+  color: var(--text-secondary);
 }
 
-ul li {
-    padding: 8px 0;
-    font-size: 1.1em;
-    display: flex;
-    align-items: center;
+.cv-contact-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
 }
 
-ul li img {
-    width: 30px;
-    height: 30px;
-    margin-right: 10px;
+.cv-contact-item svg {
+  width: 1rem;
+  height: 1rem;
+  color: var(--accent-primary);
 }
 
-a {
-    color: #2980b9;
-    text-decoration: none;
-    font-weight: 600;
-    transition: color 0.3s, transform 0.3s;
+.cv-banner-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+  align-self: flex-start;
 }
 
-
-.skills-extended {
-    margin-bottom: 25px;
-    background-color: #f4f6f7;  /* Fondo sutil */
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+/* CV Two-Column Main Grid */
+.cv-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.35fr;
+  gap: 2rem;
+  align-items: start;
 }
 
-.skills-extended h3 {
-    font-weight: 600;
-    color: #34495e;  /* Color del título */
-    margin-bottom: 15px; 
-    font-size: 1.5em;  /* Tamaño de fuente */
+.cv-panel {
+  background: var(--bg-surface);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  padding: clamp(1.35rem, 2.5vw, 1.85rem);
+  box-shadow: var(--shadow-card);
+  margin-bottom: 1.75rem;
 }
 
-.skills-extended ul {
-    list-style-type: none;  /* Sin viñetas */
-    padding: 0;
-    line-height: 1.8;  /* Espaciado entre líneas */
+.cv-panel-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding-bottom: 0.9rem;
+  margin-bottom: 1.25rem;
+  border-bottom: 1px solid var(--border-subtle);
 }
 
-.skills-extended ul li {
-    padding: 8px 0;  /* Espaciado en cada elemento de la lista */
-    font-size: 1.1em;  /* Tamaño de fuente */
-    display: flex;  /* Flex para alineación */
-    align-items: center;  /* Centrando verticalmente */
+.cv-panel-title {
+  font-family: var(--font-display);
+  font-size: 1.22rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
 }
 
-.skills-extended ul li img {
-    width: 30px;  /* Tamaño de los iconos */
-    height: 30px;  /* Tamaño de los iconos */
-    margin-right: 10px;  /* Espaciado a la derecha */
-}
-a:hover {
-    color: #21618c;
-    transform: scale(1.05);
+.cv-panel-title svg {
+  width: 1.2rem;
+  height: 1.2rem;
+  color: var(--accent-primary);
 }
 
-.aside {
-    position: fixed;
-    right: 15px;
-    top: 50%;
-    transform: translateY(-50%);
-    display: flex;
-    flex-direction: column;
+.cv-sub-heading {
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  color: var(--accent-secondary);
+  margin-top: 1.25rem;
+  margin-bottom: 0.75rem;
 }
 
-.aside a {
-    margin: 10px 0;
+.cv-sub-heading:first-of-type {
+  margin-top: 0;
 }
 
-.aside img {
-    width: 40px;
-    height: 40px;
-    transition: transform 0.3s;
+/* Complementary & Personal Craft Table/Cards */
+.craft-list {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.85rem;
 }
 
-.aside img:hover {
-    transform: scale(1.1);  /* Efecto al pasar sobre los iconos */
+.craft-item {
+  background: var(--bg-surface-elevated);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-sm);
+  padding: 0.95rem 1.1rem;
+  display: flex;
+  gap: 0.85rem;
+  align-items: flex-start;
 }
 
-@keyframes fadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
+.craft-icon {
+  font-size: 1.35rem;
+  line-height: 1;
+  padding-top: 0.1rem;
 }
 
-@keyframes fadeInUp {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+.craft-title {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 0.95rem;
+  color: var(--text-primary);
+  margin-bottom: 0.2rem;
 }
 
-@keyframes slideInLeft {
-    from {
-        opacity: 0;
-        transform: translateX(-100%);
-    }
-    to {
-        opacity: 1;
-        transform: translateX(0);
-    }
+.craft-desc {
+  font-size: var(--text-sm);
+  color: var(--text-secondary);
 }
 
-/* Añadido de transición suave para la entrada del nombre */
-.profile-header h1 {
-    animation: slideInLeft 1.5s;
-    color: #2c3e50;
-    font-weight: bold;
-}
-
-/* Opcional: Añadir tipografía Google Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
-
-
-.view-certificates-btn {
-    padding: 8px 12px;
-    font-size: 14px;
-    background-color: #4CAF50;
-    color: white;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-.view-certificates-btn:hover {
-    background-color: #45a049;
-}
-
-
-
-/* Estilos del contenedor de cursos */
-.courses {
-    max-width: 600px;
-    margin: 0 auto;
-    font-family: Arial, sans-serif;
-    color: #333;
-}
-
-.courses-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 20px;
-}
-
-.section-title {
-    margin: 0;
-}
-
-.view-certificates-btn {
-    padding: 8px 12px;
-    font-size: 14px;
-    background-color: #4CAF50;
-    color: white;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-.view-certificates-btn:hover {
-    background-color: #45a049;
+/* Courses Table */
+.courses-table-wrap {
+  overflow-x: auto;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border-subtle);
 }
 
 .courses-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin: 0 auto;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  border-collapse: collapse;
+  font-size: var(--text-sm);
 }
 
 .courses-table th,
 .courses-table td {
-    padding: 12px;
-    border: 1px solid #ddd;
-    text-align: left;
+  padding: 0.9rem 1rem;
+  text-align: left;
+  border-bottom: 1px solid var(--border-subtle);
+  vertical-align: top;
 }
 
 .courses-table th {
-    background-color: #f4f4f4;
-    font-weight: bold;
+  background: var(--bg-surface-elevated);
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--text-primary);
 }
 
-.courses-table tr:nth-child(even) {
-    background-color: #f9f9f9;
+.courses-table tr:last-child td {
+  border-bottom: none;
 }
 
-/* Modal básico */
-.modal {
-    display: none;
-    position: fixed;
-    z-index: 1;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    overflow: auto;
-    background-color: rgb(0,0,0); /* Fondo oscuro */
-    background-color: rgba(0,0,0,0.4); /* Fondo oscuro con transparencia */
+.courses-table tr:hover td {
+  background: rgba(30, 41, 59, 0.45);
 }
 
-/* Contenido del modal */
-.modal-content {
-    background-color: #fefefe;
-    margin: 15% auto;
-    padding: 20px;
-    border: 1px solid #888;
-    width: 80%; /* Ancho del modal */
-    max-width: 1000px; /* Ancho máximo */
-    box-sizing: border-box;
+@media (max-width: 992px) {
+  .cv-hero-banner {
+    grid-template-columns: 1fr;
+  }
+
+  .cv-banner-actions {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .cv-grid {
+    grid-template-columns: 1fr;
+  }
 }
 
-/* Botón para cerrar */
-.close {
-    color: #aaa;
-    float: right;
-    font-size: 28px;
-    font-weight: bold;
+/* ==========================================================================
+   PRINT STYLESHEET (@media print) FOR CLEAN PDF EXPORT & ATS ACCESSIBILITY
+   Strict Swiss editorial styling: High contrast, no overflow, no orphaned headings
+   ========================================================================== */
+
+@page {
+  size: A4 portrait;
+  margin: 12mm 14mm 14mm 14mm;
 }
 
-.close:hover,
-.close:focus {
-    color: black;
-    text-decoration: none;
-    cursor: pointer;
-}
+@media print {
+  :root {
+    --bg-canvas: #ffffff !important;
+    --bg-surface: #ffffff !important;
+    --bg-surface-elevated: #f8fafc !important;
+    --text-primary: #090d16 !important;
+    --text-secondary: #1e293b !important;
+    --text-muted: #475569 !important;
+    --accent-primary: #0369a1 !important;
+    --accent-secondary: #9a3412 !important;
+    --border-subtle: #cbd5e1 !important;
+    --border-strong: #94a3b8 !important;
+  }
 
-/* Estilo para el visor PDF y la imagen */
-#pdfViewer, #imageViewer {
-    width: 100%;
-    height: 100%;
-    max-height: 80vh; /* Limita la altura para que no se extienda demasiado */
-    margin: 0 auto;
-    display: block;
-    object-fit: contain; /* Ajusta el contenido del PDF sin distorsionarlo */
-}
+  *,
+  *::before,
+  *::after {
+    box-shadow: none !important;
+    text-shadow: none !important;
+    filter: none !important;
+    transition: none !important;
+    animation: none !important;
+  }
 
-/* Asegura que el contenido no se sobrecargue en pantallas pequeñas */
-@media screen and (max-width: 768px) {
-    .modal-content {
-        width: 95%; /* Ancho mayor en pantallas pequeñas */
-        padding: 10px; /* Menos padding */
-    }
-    #pdfViewer, #imageViewer {
-        max-height: 70vh; /* Limita aún más la altura en dispositivos móviles */
-    }
-}
+  body {
+    background: #ffffff !important;
+    color: #090d16 !important;
+    font-size: 10pt !important;
+    line-height: 1.45 !important;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
 
+  .site-header,
+  .site-footer,
+  .cv-banner-actions,
+  .lightbox-modal,
+  .cert-zoom-hint,
+  .no-print,
+  .qc-nav-shell,
+  .qc-custom-cursor,
+  .qc-canvas-layer,
+  .qc-cmd-palette-backdrop,
+  .qc-btn,
+  .qc-filter-bar,
+  .qc-terminal-wrapper,
+  .shutter-overlay {
+    display: none !important;
+  }
 
-/* Contenido del modal */
-.modal-content {
-    position: relative;
-    margin: 5% auto;
-    padding: 20px;
-    max-width: 80%;
-    background-color: rgba(249, 249, 249, 0.349); /* Fondo blanco con transparencia */
-    border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-}
-.close {
-    position: absolute;
-    top: 10px;
-    right: 15px;
-    font-size: 24px;
-    cursor: pointer;
-}
+  .cv-hero-banner {
+    display: flex !important;
+    flex-direction: row !important;
+    gap: 1.25rem !important;
+    border: 1px solid #cbd5e1 !important;
+    border-radius: 6px !important;
+    padding: 1rem !important;
+    margin-bottom: 1.25rem !important;
+    background: #ffffff !important;
+    break-inside: avoid;
+  }
 
-/* Galería de diplomas */
-.gallery {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-    gap: 15px;
-    margin-top: 20px;
-}
+  .cv-avatar-wrap {
+    width: 80px !important;
+    height: 80px !important;
+    border-radius: 4px !important;
+    border: 1px solid #94a3b8 !important;
+  }
 
-.gallery img {
-    width: 100%;
-    border-radius: 4px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-    transition: transform 0.3s ease;
-}
+  .cv-banner-title {
+    font-size: 1.5rem !important;
+    color: #090d16 !important;
+    margin-bottom: 0.15rem !important;
+  }
 
-.gallery img:hover {
-    transform: scale(1.05);
-}
+  .cv-banner-role {
+    font-size: 0.85rem !important;
+    color: #0369a1 !important;
+    margin-bottom: 0.35rem !important;
+  }
 
-/* Estilos del modal para PDFs o imágenes */
-#fileModal .modal-content {
-    max-width: 90%;
-    height: 90%;
-    padding: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
+  .cv-banner-summary {
+    font-size: 8.5pt !important;
+    color: #334155 !important;
+    line-height: 1.35 !important;
+  }
 
-/* Ajustes del visor PDF */
-#pdfViewer {
-    width: 100%;
-    height: 100%;
-    display: none;
-}
+  .cv-contact-strip {
+    font-size: 8.5pt !important;
+    gap: 0.35rem 1rem !important;
+    padding-top: 0.25rem !important;
+  }
 
-/* Ajustes del visor de imagen */
-#imageViewer {
-    display: none;
-    max-width: 100%;
-    max-height: 90vh; /* Limita la altura máxima para evitar desbordes */
-    object-fit: contain; /* Ajusta la imagen sin distorsionarla */
-    border-radius: 8px; /* Bordes redondeados para un mejor diseño */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Sombra para destacar */
-}
+  .cv-hero-banner,
+  .cv-panel,
+  .timeline-card,
+  .craft-item,
+  .cert-card,
+  .qc-timeline-item,
+  .qc-edu-grid > * {
+    background: #ffffff !important;
+    box-shadow: none !important;
+    border: 1px solid #e2e8f0 !important;
+    break-inside: avoid !important;
+    page-break-inside: avoid !important;
+  }
 
+  .cv-panel-title,
+  .qc-section-title,
+  .timeline-role {
+    color: #090d16 !important;
+    break-after: avoid !important;
+    page-break-after: avoid !important;
+  }
+
+  .cv-grid {
+    display: grid !important;
+    grid-template-columns: 1fr 1.35fr !important;
+    gap: 1.1rem !important;
+  }
+
+  .courses-table th,
+  .courses-table td {
+    padding: 0.45rem 0.65rem !important;
+    font-size: 8.5pt !important;
+    border-color: #cbd5e1 !important;
+  }
+
+  .skill-pills {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    gap: 0.3rem !important;
+  }
+
+  .skill-pill {
+    font-size: 8pt !important;
+    padding: 0.2rem 0.5rem !important;
+    border: 1px solid #cbd5e1 !important;
+    background: #f8fafc !important;
+    color: #0f172a !important;
+  }
+
+  .skill-checklist li,
+  .timeline-list li {
+    font-size: 8.5pt !important;
+    line-height: 1.35 !important;
+    margin-bottom: 0.25rem !important;
+  }
+
+  a {
+    color: #090d16 !important;
+    text-decoration: none !important;
+  }
+}

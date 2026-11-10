@@ -2,334 +2,729 @@
 <html lang="es">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Perfil de Ali Alejandro Andrade</title>
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="/src/style/cv.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Currículum Vitae y Certificaciones | Ali Alejandro Andrade</title>
+  <meta name="description" content="Currículum Vitae de Ali Alejandro Andrade Godoy: TSU en Informática, Desarrollador Web Front-End / Full Stack JavaScript, Analista de Sistemas, especialista en Cloud (Azure/Linux), Ciberseguridad SEPE y Operaciones ERP." />
+  <meta name="author" content="Ali Alejandro Andrade Godoy" />
+  <meta name="theme-color" content="#090d16" />
+  <link rel="canonical" href="https://ali-ajelandrox.github.io/src/routes/cv.html" />
+  <link rel="icon" type="image/svg+xml" href="../img/favicon.svg" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="profile" />
+  <meta property="og:title" content="Currículum Vitae y Diplomas Verificados | Ali Alejandro Andrade" />
+  <meta property="og:description" content="Consulta la trayectoria laboral en TI y operaciones, formación universitaria y los 7 diplomas oficiales de Ali Alejandro Andrade." />
+  <meta property="og:url" content="https://ali-ajelandrox.github.io/src/routes/cv.html" />
+  <meta property="og:image" content="https://ali-ajelandrox.github.io/assets/img/ali_perfil.jpeg" />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;family=Space+Grotesk:wght@500;600;700&amp;family=Syne:wght@700;800&amp;display=swap" rel="stylesheet" />
+
+  <!-- Stylesheet + Quantum Craft React Bundle CSS -->
+  <link rel="stylesheet" href="../style/cv.css" />
+  <link rel="stylesheet" href="../../dist/assets/portfolio-bundle.css" />
+  <script>
+    (function() {
+      try {
+        var p = new URLSearchParams(window.location.search);
+        var y = p.get('y') || p.get('scrollY');
+        if (y) {
+          window.addEventListener('DOMContentLoaded', function() {
+            setTimeout(function() { window.scrollTo(0, parseInt(y, 10)); }, 50);
+          });
+        }
+      } catch(e) {}
+    })();
+  </script>
 </head>
 
 <body>
-    <div class="container">
-        <div class="profile-header">
-            <h1>Ali Alejandro Andrade</h1>
-            <p>Soy un apasionado de la tecnología con un conocimiento sólido en programación y un fuerte compromiso para
-                crecer y desarrollarme en el campo. Soy un aprendiz rápido, siempre dispuesto a asumir nuevos desafíos y
-                adquirir nuevos conocimientos en un entorno dinámico y colaborativo.</p>
+  <div id="root">
+  <a class="skip-link" href="#main-content">Saltar al contenido principal</a>
+
+  <!-- Global Navigation Header -->
+  <header class="site-header">
+    <div class="site-container header-inner">
+      <a class="brand" href="../../index.html" aria-label="Volver al inicio del portafolio de Ali Andrade">
+        <span class="brand-mark" aria-hidden="true">AA</span>
+        <span class="brand-meta">
+          <span>Ali Andrade</span>
+          <span class="brand-role">Front-End · Sistemas IT</span>
+        </span>
+      </a>
+
+      <button class="nav-toggle" type="button" data-nav-toggle aria-expanded="false" aria-controls="primary-navigation" aria-label="Abrir menú de navegación">
+        <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+          <path d="M4 6h16M4 12h16M4 18h16" stroke-linecap="round" />
+        </svg>
+      </button>
+
+      <nav id="primary-navigation" class="nav-menu" data-nav-menu aria-label="Navegación principal">
+        <a class="nav-link" href="../../index.html">Inicio</a>
+        <a class="nav-link" href="./cv.html" aria-current="page">CV Completo</a>
+        <a class="nav-link" href="./proyects.html">Proyectos (6)</a>
+        <a class="nav-link" href="#galeria-diplomas">Diplomas (7)</a>
+        <a class="nav-link" href="./qr.html">Tarjeta QR</a>
+        <a class="btn btn--primary btn--sm" href="mailto:Andradegali1503@gmail.com">Contactar</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-content" class="section">
+    <div class="site-container">
+      <!-- CV Hero Header Banner -->
+      <section class="cv-hero-banner" aria-labelledby="cv-name-heading">
+        <div class="cv-avatar-wrap">
+          <picture>
+            <source srcset="../../assets/img/ali_perfil.webp" type="image/webp" />
+            <img src="../../assets/img/ali_perfil.jpeg" alt="Fotografía profesional de Ali Alejandro Andrade Godoy" width="224" height="224" decoding="async" />
+          </picture>
         </div>
 
-        <div class="row">
-            <div class="col-md-6">
-                <div class="contact-info">
-                    <h2 class="section-title">Contacto</h2>
-                    <p><strong>Teléfono:</strong> +34-642-83-47-42</p>
-                    <p><strong>Sitio web:</strong> <a
-                            href="https://github.com/ali-ajelandrox?tab=repositories">https://github.com/ali-ajelandrox?tab=repositories</a>
-                    </p>
-                    <p><strong>Correo Electrónico:</strong> Ajelandrox15@gmail.com</p>
-                </div>
+        <div class="cv-banner-info">
+          <div class="hero-badges">
+            <span class="badge badge--cyan">TSU en Informática (IUGT)</span>
+            <span class="badge badge--amber">Triple Certificación Oficial SEPE España (2024)</span>
+            <span class="badge badge--emerald">Disponibilidad Inmediata · España</span>
+          </div>
+          <h1 id="cv-name-heading" class="cv-banner-title">Ali Alejandro Andrade Godoy</h1>
+          <p class="cv-banner-role">Desarrollador Web Front-End &amp; Full-Stack · TSU en Informática · Sistemas IT &amp; Cloud</p>
+          <p class="cv-banner-summary">
+            Desarrollador Web y Técnico Superior Universitario en Informática con sólida base en arquitecturas React, JavaScript (ES6+), CSS3/SASS y APIs RESTful. Perfil diferenciado por más de 6 años de experiencia previa en soporte técnico de sistemas, administración de redes industriales (PRTG), Cloud Computing (Azure/Linux) y gestión logística ERP (Defontana). Titulado universitario y triple certificado oficial por el SEPE (Gobierno de España) en Desarrollo Web Cliente/Servidor, Cloud Computing y Ciberseguridad Empresarial.
+          </p>
 
-                <div class="skills">
-                    <h2 class="section-title">Habilidades Técnicas</h2>
-                    <h3>Desarrollo de Aplicaciones</h3>
-                    <ul>
-                        <li>
-                            <img src="/src/img/html5.png" alt="HTML5 Logo"> &nbsp; <strong>HTML</strong>
-                        </li>
-                        <li>
-                            <img src="/src/img/JavaScript-logo.png" alt="JavaScript Logo"> &nbsp; <strong>JavaScript</strong>
-                        </li>
-                        <li>
-                            <img src="/src/img/gitbash.png" alt="GitBash Logo"> &nbsp; <strong>GitBash</strong>
-                        </li>
-                        <li>
-                            <img src="/src/img/bootstrap-framework-logo-D45BDEC73C-seeklogo.com.png" alt="Bootstrap Logo"> &nbsp; <strong>Bootstrap</strong>
-                        </li>
-                        <li>
-                            <img src="/src/img/react.png" alt="React Logo"> &nbsp; <strong>React</strong>
-                        </li>
-                        <li>
-                            <img src="/src/img/angular.png" alt="Angular Logo"> &nbsp; <strong>Angular</strong>
-                        </li>
-                        <li>
-                            <img src="/src/img/nodejs.png" alt="NodeJS Logo"> &nbsp; <strong>NodeJS</strong>
-                        </li>
-                        <li>
-                            <img src="/src/img/mongodb.png" alt="MongoDB Logo"> &nbsp; <strong>MongoDB</strong>
-                        </li>
-                        <li>
-                            <img src="/src/img/css.png" alt="CSS3 Logo"> &nbsp; <strong>CSS3</strong>
-                        </li>
-                    </ul>
-                    
+          <div class="cv-contact-strip" aria-label="Información de contacto directo">
+            <span class="cv-contact-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z" />
+              </svg>
+              <a href="tel:+34642834742">+34 642 83 47 42</a>
+            </span>
 
-                    <h3>Logística</h3>
-                    <ul>
-                        <li>Uso de sistemas ERP como Defontana para la gestión de inventarios y facturación</li>
-                        <li>Monitoreo de redes industriales con PRTG Network Monitor</li>
-                        <li>Optimización de rutas de distribución para cadenas de suministros</li>
-                        <li>Gestión y supervisión de almacenes y logística en empresas de distribución</li>
-                        <li>Coordinación de equipos y mejora continua en procesos de logística</li>
-                    </ul>
-                </div>
+            <span class="cv-contact-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                <rect x="2" y="4" width="20" height="16" rx="2" />
+                <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
+              </svg>
+              <a href="mailto:Andradegali1503@gmail.com">Andradegali1503@gmail.com</a>
+              <span>/</span>
+              <a href="mailto:Ajelandrox15@gmail.com">Ajelandrox15@gmail.com</a>
+            </span>
 
-                <div class="skills-extended">
-                    <h2 class="section-title">Habilidades Personales</h2>
-                    <table cellpadding="10" cellspacing="0" style="border-collapse: collapse; width: 100%;">
-                        <thead>
-                            <tr>
-                                <th style="text-align: left;">Icono</th>
-                                <th style="text-align: left;">Habilidad</th>
-                                <th style="text-align: left;">Descripción</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>👩‍🍳</td>
-                                <td><strong>Ayudante de cocina</strong></td>
-                                <td>Más de 3 años de experiencia en preparación de alimentos y gestión de cocina,
-                                    optimizando procesos y colaborando en equipo.</td>
-                            </tr>
-                            <tr>
-                                <td>🔧</td>
-                                <td><strong>Micro soldadura</strong></td>
-                                <td>Habilidad en reparación de componentes electrónicos de manera independiente, con
-                                    experiencia en la reparación de celulares.</td>
-                            </tr>
-                            <tr>
-                                <td>🐧</td>
-                                <td><strong>Linux</strong></td>
-                                <td>Conocimiento intermedio en el uso y manipulación de sistemas operativos Linux, con
-                                    enfoque autodidacta para resolver problemas técnicos.</td>
-                            </tr>
-                            <tr>
-                                <td>🪑</td>
-                                <td><strong>Carpintería</strong></td>
-                                <td>Experiencia en la creación de muebles y trabajos de carpintería, dedicando los fines
-                                    de semana a proyectos de diseño y construcción.</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
+            <span class="cv-contact-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22" />
+              </svg>
+              <a href="https://github.com/ali-ajelandrox?tab=repositories" target="_blank" rel="noopener noreferrer">github.com/ali-ajelandrox</a>
+            </span>
 
+            <span class="cv-contact-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
+                <rect x="2" y="9" width="4" height="12" />
+                <circle cx="4" cy="4" r="2" />
+              </svg>
+              <a href="https://www.linkedin.com/in/alejandro-andrade-1a38a7331" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+            </span>
+          </div>
+        </div>
+
+        <div class="cv-banner-actions">
+          <button type="button" class="btn btn--primary btn--sm" data-print-cv>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+              <polyline points="6 9 6 2 18 2 18 9" />
+              <path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2" />
+              <rect x="6" y="14" width="12" height="8" />
+            </svg>
+            Imprimir / Guardar PDF (A4)
+          </button>
+          <a class="btn btn--amber btn--sm" href="#galeria-diplomas" onclick="openModal(0)">
+            Ver Bóveda de Diplomas (7)
+          </a>
+          <a class="btn btn--secondary btn--sm" href="./proyects.html">
+            Explorar Proyectos →
+          </a>
+        </div>
+      </section>
+
+      <!-- Two-Column CV Grid -->
+      <div class="cv-grid">
+        <!-- LEFT COLUMN: Technical Skills, Systems/Logistics, Education & Complementary Craft -->
+        <div>
+          <!-- Technical Skills Panel -->
+          <section class="cv-panel" aria-labelledby="skills-heading">
+            <div class="cv-panel-header">
+              <h2 id="skills-heading" class="cv-panel-title">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                  <polyline points="16 18 22 12 16 6" />
+                  <polyline points="8 6 2 12 8 18" />
+                </svg>
+                Habilidades Técnicas
+              </h2>
             </div>
 
-            <div class="col-md-6">
-                <div class="education">
-                    <h2 class="section-title">Educación</h2>
-                    <p><strong>Técnico Superior Universitario en Informática</strong><br>
-                        2014 – 2018 Instituto Universitario de Gerencia y Tecnología. Caracas, Venezuela</p>
-                    <p><strong>Bachiller en Ciencias</strong><br>
-                        2009 - 2013 Unidad Educativa Nacional Anzoátegui. Caracas, Venezuela</p>
-                </div>
-
-                <div class="experience">
-                    <h2 class="section-title">Experiencia Laboral</h2>
-                    <p><strong>Ministerio de Educación. Analista de sistemas</strong><br>
-                        2017 - 2019<br>
-                        Soporte técnico de escritorio a los usuarios de la organización, instalación, mantenimiento y
-                        reemplazo de los equipos de computación y periféricos. Instalación, configuración de los
-                        diferentes equipos de la red, configuración y soporte a Office. Soporte remoto.</p>
-
-                    <p><strong>MEGA FRIO Chile. Control de Calidad</strong><br>
-                        2020-2024<br>
-                        <strong>Jefe de almacén</strong>
-                        Diciembre 2023 - Marzo 2024 (4 meses)
-
-                        Coordinación y gestión integral de las operaciones del almacén, incluyendo la recepción,
-                        almacenamiento y despacho de productos.
-                        Supervisión de un equipo encargado del manejo de inventarios y la optimización del espacio de
-                        almacenamiento.
-                        Resolución de conflictos y escalamiento de problemas operativos en situaciones críticas.
-                        Implementación de mejoras en los procesos de logística y distribución para garantizar un flujo
-                        eficiente de productos.
-                        <br>
-
-                        <br><strong>Auxiliar informático</strong><br>
-                        Enero 2020 - Noviembre 2023 (3 años 11 meses) <br>
-
-                        Encargado del mantenimiento y soporte de sistemas informáticos, asegurando el correcto
-                        funcionamiento del hardware y software de la empresa.
-                        Monitoreo continuo de redes para garantizar la estabilidad y seguridad de las comunicaciones
-                        internas.
-                        Diagnóstico y solución de problemas técnicos en tiempo real, minimizando el tiempo de
-                        inactividad de los sistemas.
-                        Asistencia en la instalación de nuevos equipos y actualizaciones de software, contribuyendo a la
-                        modernización de la infraestructura tecnológica.
-                    </p>
-
-                    <p><strong>Sociedad Bravo y Hermanos. Jefe de Bodega y Control de Calidad</strong><br>
-                        Profesional con amplia experiencia como Jefe de Operaciones de Bodega y Logística, especializado
-                        en la distribución de alimentos a grandes cadenas de supermercados y restaurantes a nivel
-                        nacional. Experto en el uso de herramientas ERP para la gestión eficiente de inventarios,
-                        seguimiento de pedidos y optimización de rutas de distribución.</p>
-
-
-                    <p><strong>Cossette Muebles</strong><br>
-                       <p>Manejo de herramientas: Competente en el uso de herramientas manuales y eléctricas de carpintería, como sierras, lijadoras, taladros, cepillos y fresadoras, garantizando precisión y seguridad en cada trabajo.</p> <br>
-
-                        <p>Armado de muebles: Experiencia en el ensamblaje de muebles y estructuras de madera, siguiendo planos y especificaciones, con atención al detalle para asegurar una construcción sólida y funcional.</p> <br>
-                        
-                        <p>Pulitura de piezas: Habilidad para lijar, alisar y dar acabado a superficies de madera, logrando una textura uniforme y libre de imperfecciones para mejorar la presentación del mueble final.</p><br>
-                        
-                       <p> Manejo de traspaleta: Familiaridad con el uso de traspaletas para mover materiales y productos pesados dentro del taller, optimizando tiempos y asegurando el cuidado de las piezas.</p><br>
-                        
-                        Tapizado y  Barnizado de muebles: Conocimiento en el tapizado de muebles, incluyendo la elección de materiales, corte de telas, acolchado y ensamblaje, garantizando acabados de calidad y durabilidad.
-                        
-                        Experto en la aplicación de barnices y lacas, utilizando técnicas adecuadas para proteger y resaltar la belleza natural de la madera, logrando acabados uniformes y resistentes.
-                    
-                    </p>
-                </div>
-
-                <div class="courses">
-                    <div class="courses-header">
-                        <h2 class="section-title">Cursos</h2>
-                        <button class="view-certificates-btn" onclick="openModal()">Ver Diplomas</button>
-                    </div>
-                    <table class="courses-table">
-                        <thead>
-                            <tr>
-                                <th>Curso</th>
-                                <th>Descripción</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>Master en webs Full Stack</td>
-                                <td>Angular, Node, Laravel, Symfony + Programación API’S Rest Full: HTML, CSS, Angular,
-                                    React-Vite, JavaScript, MySQL</td>
-                            </tr>
-                            <tr>
-                                <td>Desafío Latam</td>
-                                <td>Desarrollo Full Stack JavaScript</td>
-                            </tr>
-                            <tr>
-                                <td> <strong>IFCT091PO (SEPE) </strong> PROGRAMACIÓN PÁGINAS WEB JAVASCRIPT Y PHP</td>
-                                <td> PROGRAMACIÓN CLIENTE,
-                                    PROGRAMACIÓN SERVIDOR,
-                                    BASE DE DATOS. </td>
-                            </tr>
-                            <tr>
-                                <td><strong> IFCT026PO (SEPE) </strong>CLOUD COMPUTING (AZURE, LINUX)</td>
-                                <td>
-                                    <strong>CLOUD COMPUTING</strong>:
-                                    Plataforma Windows Azure
-                                    Usuario: modo de acceso y trabajo
-                                    Administración de Azure
-                                    Virtualización con Azure
-                                    Vista programador
-                                    Servicios de Azure
-                                    Bases de Datos con Azure
-                                    Programación en Azure
-                                    Librerías
-                                    Análisis
-                                    Diseño
-                                    Codificación
-                                    Compilación
-                                    Depuración
-                                    Implementación
-                                    <strong>LINUX</strong>:
-                                    Distribuciones Linux en la Nube
-                                    Usuario: modo de acceso y trabajo
-                                    Administración
-                                    Virtualización con Linux
-                                    Vista programador
-                                    Servicios en Linux
-                                    Bases de Datos en Linux
-                                    Programación en la Nube bajo Linux
-                                    Librerías
-                                    Análisis
-                                    Diseño
-                                    Codificación
-                                    Compilación
-                                    Depuración
-                                    Implementación
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <strong>IFCT050PO (SEPE)</strong> Gestión de la seguridad informática en la empresa
-                                    F220582AA-476/21
-                                </td>
-                                <td>
-                                    Introducción a la seguridad,
-                                    Políticas de seguridad,
-                                    Auditoría y normativa de seguridad,
-                                    Estrategias de seguridad,
-                                    Exploración de las redes,
-                                    Ataques remotos y locales,
-                                    Seguridad en redes inalámbricas,
-                                    Criptografía y criptoanálisis,
-                                    Autenticación
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-
-                <!-- Modal para mostrar la galería de diplomas -->
-<div id="modal" class="modal">
-    <div class="modal-content">
-        <span class="close" onclick="closeModal()">&times;</span>
-        <h2>Galería de Diplomas</h2>
-        <div class="gallery">
-            <!-- Cada imagen se vincula a un archivo (PDF o imagen) -->
-            <img src="/src/PDF/iweb.png" alt="Diploma 1" onclick="openFile('/src/PDF/iweb.png')">
-            <img src="/src/PDF/css.png" alt="Diploma 2" onclick="openFile('/src/PDF/css.png')">
-            <img src="/src/PDF/js.png" alt="Diploma 3" onclick="openFile('/src/PDF/js.png')">
-            <img src="/src/PDF/react.png" alt="Diploma 4" onclick="openFile('/src/PDF/react.png')">
-            <img src="/src/PDF/diploma_ciber-seguridad.png" alt="Diploma 5"
-                onclick="openFile('/src/PDF/diploma_ciber-seguridad.png')">
-            <img src="/src/PDF/Globas-cs.png" alt="Diploma 6"
-                onclick="openFile('/src/PDF/Globas-cs.png')">
-            <img src="/src/PDF/diplomasepe1.png" alt="Diploma 7"
-                onclick="openFile('/src/PDF/diplomasepe1.png')">
-            <!-- Añadir más imágenes aquí -->
-        </div>
-    </div>
-</div>
-
-<!-- Modal para ver el PDF o la imagen -->
-<div id="fileModal" class="modal">
-    <div class="modal-content">
-        <span class="close" onclick="closeFileModal()">&times;</span>
-        <!-- Contenedor para PDF (PDF.js) -->
-        <div id="pdfViewer" style="width: 100%; height: 100%; display: none;"></div>
-        <!-- Contenedor para Imagen -->
-        <img id="imageViewer" src="" alt="Visualización de Diploma" style="display: none; max-width: 100%; max-height: 600px;">
-    </div>
-</div>
-
-
-<!-- Agregar script de PDF.js -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.10.377/pdf.min.js"></script>
-
-
-
+            <h3 class="cv-sub-heading">Desarrollo de Aplicaciones Web</h3>
+            <div class="skill-pills">
+              <span class="skill-pill"><img src="../img/html5.png" alt="HTML5 Logo" width="20" height="20" loading="lazy" /> HTML5</span>
+              <span class="skill-pill"><img src="../img/css.png" alt="CSS3 Logo" width="20" height="20" loading="lazy" /> CSS3</span>
+              <span class="skill-pill"><img src="../img/JavaScript-logo.png" alt="JavaScript Logo" width="20" height="20" loading="lazy" /> JavaScript (ES6+)</span>
+              <span class="skill-pill"><img src="../img/react.png" alt="React Logo" width="20" height="20" loading="lazy" /> React</span>
+              <span class="skill-pill"><img src="../img/angular.png" alt="Angular Logo" width="20" height="20" loading="lazy" /> Angular</span>
+              <span class="skill-pill"><img src="../img/nodejs.png" alt="NodeJS Logo" width="20" height="20" loading="lazy" /> Node.js</span>
+              <span class="skill-pill"><img src="../img/mongodb.png" alt="MongoDB Logo" width="20" height="20" loading="lazy" /> MongoDB</span>
+              <span class="skill-pill"><img src="../img/bootstrap-framework-logo-D45BDEC73C-seeklogo.com.png" alt="Bootstrap Logo" width="20" height="20" loading="lazy" /> Bootstrap</span>
+              <span class="skill-pill"><img src="../img/gitbash.png" alt="GitBash Logo" width="20" height="20" loading="lazy" /> Git &amp; GitBash</span>
+              <span class="skill-pill">PHP &amp; MySQL</span>
+              <span class="skill-pill">Laravel &amp; Symfony</span>
+              <span class="skill-pill">APIs RESTful</span>
             </div>
+
+            <h3 class="cv-sub-heading">Sistemas IT, Redes, Cloud &amp; Logística ERP</h3>
+            <div class="skill-pills" style="margin-bottom: 1rem;">
+              <span class="skill-pill"><img src="../img/defontana.png" alt="Defontana ERP" width="20" height="20" loading="lazy" /> ERP Defontana</span>
+              <span class="skill-pill"><img src="../img/PRTG-Network-Monitor.jpg" alt="PRTG Network Monitor" width="20" height="20" loading="lazy" /> PRTG Network Monitor</span>
+              <span class="skill-pill">Windows Azure</span>
+              <span class="skill-pill">Linux Administration</span>
+              <span class="skill-pill">Ciberseguridad</span>
+            </div>
+
+            <ul class="skill-checklist">
+              <li><strong>ERP Defontana:</strong> Gestión integral de inventarios, trazabilidad de lotes, guías de despacho, facturación electrónica y órdenes de compra.</li>
+              <li><strong>PRTG Network Monitor:</strong> Supervisión proactiva de redes LAN, switches, routers y estaciones de trabajo con detección de alertas en tiempo real.</li>
+              <li><strong>Cloud Computing (Azure & Linux):</strong> Certificación oficial SEPE IFCT026PO. Despliegue de máquinas virtuales, servicios web y gestión de bases de datos.</li>
+              <li><strong>Ciberseguridad Empresarial:</strong> Certificación oficial SEPE IFCT050PO. Políticas de seguridad, análisis de vulnerabilidades, firewalls y cifrado.</li>
+              <li><strong>Optimización Logística:</strong> Coordinación de rutas de distribución a nivel nacional y supervisión de almacenes bajo estrictos estándares de control de calidad.</li>
+            </ul>
+          </section>
+
+          <!-- Academic Education Panel -->
+          <section class="cv-panel" aria-labelledby="education-heading">
+            <div class="cv-panel-header">
+              <h2 id="education-heading" class="cv-panel-title">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                  <path d="M22 10v6M2 10l10-5 10 5-10 5z" />
+                  <path d="M6 12v5c3 3 9 3 12 0v-5" />
+                </svg>
+                Educación Reglada
+              </h2>
+            </div>
+
+            <div class="timeline-column">
+              <article class="timeline-card">
+                <div class="timeline-meta">
+                  <span class="timeline-date">2014 – 2018</span>
+                  <span class="badge badge--cyan">Educación Superior</span>
+                </div>
+                <h3 class="timeline-role">Técnico Superior Universitario en Informática</h3>
+                <p class="timeline-company">Instituto Universitario de Gerencia y Tecnología (IUGT) · Caracas, Venezuela</p>
+              </article>
+
+              <article class="timeline-card">
+                <div class="timeline-meta">
+                  <span class="timeline-date">2009 – 2013</span>
+                  <span class="badge">Educación Media</span>
+                </div>
+                <h3 class="timeline-role">Bachiller en Ciencias</h3>
+                <p class="timeline-company">Unidad Educativa Nacional Anzoátegui · Caracas, Venezuela</p>
+              </article>
+            </div>
+          </section>
+
+          <!-- Complementary & Personal Skills Panel -->
+          <section class="cv-panel" aria-labelledby="personal-skills-heading">
+            <div class="cv-panel-header">
+              <h2 id="personal-skills-heading" class="cv-panel-title">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                  <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z" />
+                </svg>
+                Competencias Técnicas y Oficios Complementarios
+              </h2>
+            </div>
+
+            <div class="craft-list">
+              <article class="craft-item">
+                <span class="craft-icon" aria-hidden="true">🐧</span>
+                <div>
+                  <h3 class="craft-title">Sistemas Operativos Linux</h3>
+                  <p class="craft-desc">Conocimiento intermedio en el uso, administración y manipulación de sistemas Linux en local y nube, con enfoque autodidacta para diagnóstico y resolución de problemas técnicos.</p>
+                </div>
+              </article>
+
+              <article class="craft-item">
+                <span class="craft-icon" aria-hidden="true">🔧</span>
+                <div>
+                  <h3 class="craft-title">Micro-soldadura y Electrónica</h3>
+                  <p class="craft-desc">Habilidad en diagnóstico y reparación de componentes electrónicos de manera independiente, con experiencia práctica en reparación de dispositivos móviles a nivel de placa.</p>
+                </div>
+              </article>
+
+              <article class="craft-item">
+                <span class="craft-icon" aria-hidden="true">🪑</span>
+                <div>
+                  <h3 class="craft-title">Carpintería y Diseño de Mobiliario</h3>
+                  <p class="craft-desc">Experiencia en la creación de muebles, lectura de planos, armado estructural y acabados de precisión.</p>
+                </div>
+              </article>
+
+              <article class="craft-item">
+                <span class="craft-icon" aria-hidden="true">👩‍🍳</span>
+                <div>
+                  <h3 class="craft-title">Gestión de Cocina y Trabajo Bajo Presión</h3>
+                  <p class="craft-desc">Más de 3 años de experiencia en preparación de alimentos y gestión de cocina, optimizando tiempos de servicio y coordinando flujos en equipo.</p>
+                </div>
+              </article>
+            </div>
+          </section>
         </div>
-    </div>
 
-    <div class="aside">
-        <a href="mailto:Andradegali1503@gmail.com">
-            <img class="img-button1" src="/src/img/gmail.png" alt="Gmail">
-        </a>
-        <a href="https://github.com/ali-ajelandrox?tab=repositories">
-            <img class="img-button2" src="/src/img/github.png" alt="GitHub">
-        </a>
-        <a href="https://www.linkedin.com/in/alejandro-andrade-1a38a7331">
-            <img class="img-button3" src="/src/img/linkedin.png" alt="LinkedIn">
-        </a>
-        <a href="https://wa.me/+34642834742">
-            <img class="img-button4" src="/src/img/watsapp.png" alt="WhatsApp">
-        </a>
-    </div>
-    <script src="/scripts/modal.js"></script>
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.10.377/pdf.min.js"></script>
+        <!-- RIGHT COLUMN: Professional Experience & Specialized Courses -->
+        <div>
+          <section class="cv-panel" aria-labelledby="experience-heading">
+            <div class="cv-panel-header">
+              <h2 id="experience-heading" class="cv-panel-title">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                  <rect x="2" y="7" width="20" height="14" rx="2" ry="2" />
+                  <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16" />
+                </svg>
+                Experiencia Laboral
+              </h2>
+            </div>
 
+            <div class="timeline-column">
+              <!-- Cosentino Industries (Actual) -->
+              <article class="timeline-card timeline-card--featured" style="border-left: 3px solid #10b981;">
+                <div class="timeline-meta">
+                  <span class="timeline-date">12/2025 – Presente (Actual)</span>
+                  <span class="badge badge--emerald" style="background: rgba(16, 185, 129, 0.15); color: #10b981; border: 1px solid rgba(16, 185, 129, 0.3);">Principal · En Ejercicio</span>
+                </div>
+                <h3 class="timeline-role">Cosentino Industries · Operario de Producción</h3>
+                <p class="timeline-company" style="margin-top: 0.35rem; color: #10b981; font-weight: 600;">
+                  Automatización Industrial, Control de Calidad &amp; Sistemas PLC Siemens
+                </p>
+                <ul class="timeline-list">
+                  <li>Operación, supervisión y control de maquinaria industrial mediante sistemas de automatización basados en PLC Siemens.</li>
+                  <li>Monitorización de procesos productivos, supervisando parámetros de funcionamiento y asegurando la continuidad y eficiencia de la producción.</li>
+                  <li>Control de calidad del producto, verificando especificaciones técnicas y detectando posibles desviaciones durante el proceso.</li>
+                  <li>Supervisión y seguimiento de fórmulas de fabricación, prestando especial atención a la precisión de las proporciones, parámetros y composición del producto.</li>
+                  <li>Identificación y resolución inicial de incidencias operativas, aplicando un enfoque analítico y orientado a la mejora continua.</li>
+                  <li>Adaptación a entornos tecnológicos e industriales, combinando conocimientos de programación, lógica computacional y pensamiento estructurado con procesos de producción automatizados.</li>
+                </ul>
+              </article>
+
+              <!-- MEGA FRÍO Chile -->
+              <article class="timeline-card">
+                <div class="timeline-meta">
+                  <span class="timeline-date">2020 – 2024 (4 años 3 meses)</span>
+                  <span class="badge badge--cyan">Informática &amp; Operaciones</span>
+                </div>
+                <h3 class="timeline-role">MEGA FRÍO Chile · Soporte IT, Redes &amp; Liderazgo de Almacén</h3>
+
+                <p class="timeline-company" style="margin-top: 0.35rem; color: var(--accent-primary);">
+                  Jefe de Almacén y Control de Calidad · Diciembre 2023 – Marzo 2024 (4 meses)
+                </p>
+                <ul class="timeline-list">
+                  <li>Promovido por desempeño para coordinar recepción, clasificación y despacho masivo, liderando equipos en piso e implementando flujos de trazabilidad optimizados.</li>
+                  <li>Supervisión integral de inventarios y espacio de almacenamiento, reduciendo desviaciones y mejorando los tiempos de respuesta operativa.</li>
+                  <li>Resolución ágil de conflictos operativos y escalamiento técnico en situaciones críticas de cadena de frío y distribución continua.</li>
+                </ul>
+
+                <p class="timeline-company" style="margin-top: 0.65rem; color: var(--accent-primary);">
+                  Auxiliar de Informática y Redes · Enero 2020 – Noviembre 2023 (3 años 11 meses)
+                </p>
+                <ul class="timeline-list">
+                  <li>Mantenimiento integral preventivo y correctivo de hardware, estaciones de trabajo y servidores, garantizando disponibilidad 24/7 en operaciones logísticas críticas.</li>
+                  <li>Monitoreo activo de switches, routers y tráfico de red local con PRTG Network Monitor para detección temprana y resolución de incidencias en tiempo real.</li>
+                  <li>Diagnóstico y resolución de incidencias técnicas en tiempo real, minimizando tiempos de inactividad de los sistemas y terminales de radiofrecuencia.</li>
+                  <li>Despliegue de actualizaciones de software, configuración de políticas de acceso, inventario tecnológico y soporte técnico presencial y remoto a usuarios.</li>
+                </ul>
+              </article>
+
+              <!-- Sociedad Bravo y Hermanos -->
+              <article class="timeline-card">
+                <div class="timeline-meta">
+                  <span class="timeline-date">Marzo 2019 – Diciembre 2019</span>
+                  <span class="badge badge--emerald">Logística &amp; ERP</span>
+                </div>
+                <h3 class="timeline-role">Jefe de Bodega, Control de Calidad y Especialista ERP</h3>
+                <p class="timeline-company">Sociedad Bravo y Hermanos · Santiago, Chile</p>
+                <ul class="timeline-list">
+                  <li>Dirección operativa de almacén de distribución de alimentos para grandes cadenas de supermercados y canal HORECA a nivel nacional.</li>
+                  <li>Administración avanzada de ERP Defontana: emisión y control de guías de despacho, órdenes de compra, facturación electrónica y conciliación de stock en tiempo real.</li>
+                  <li>Supervisión de protocolos de control de calidad, fechas de caducidad, condiciones de almacenamiento y empaque bajo estándares de inocuidad alimentaria.</li>
+                  <li>Optimización de rutas de reparto logístico y coordinación con transporte para cumplimiento de entregas en plazos estrictos.</li>
+                </ul>
+              </article>
+
+              <!-- Ministerio de Educación -->
+              <article class="timeline-card">
+                <div class="timeline-meta">
+                  <span class="timeline-date">Septiembre 2017 – Febrero 2019</span>
+                  <span class="badge badge--amber">Sistemas &amp; Redes</span>
+                </div>
+                <h3 class="timeline-role">Analista de Soporte Técnico y Sistemas</h3>
+                <p class="timeline-company">Ministerio de Educación · Caracas, Venezuela</p>
+                <ul class="timeline-list">
+                  <li>Soporte técnico de nivel 1 y 2 en sede gubernamental, prestando servicio a cientos de usuarios y manteniendo la plataforma tecnológica corporativa operativa.</li>
+                  <li>Atención y resolución de tickets de soporte técnico de hardware, sistemas operativos Windows/Linux y aplicaciones ofimáticas.</li>
+                  <li>Ensamblaje, clonación de imágenes de disco, mantenimiento y renovación de parque informático, servidores y periféricos.</li>
+                  <li>Configuración de puntos de red estructurada LAN, cableado estructurado UTP, direccionamiento TCP/IP e impresoras de red corporativas.</li>
+                </ul>
+              </article>
+
+              <!-- Cossette Muebles -->
+              <article class="timeline-card">
+                <div class="timeline-meta">
+                  <span class="timeline-date">2015 – 2017</span>
+                  <span class="badge">Manufactura Técnica &amp; Oficio</span>
+                </div>
+                <h3 class="timeline-role">Especialista en Fabricación, Acabados Técnicos y Lectura de Planos</h3>
+                <p class="timeline-company">Cossette Muebles · Caracas, Venezuela</p>
+                <ul class="timeline-list">
+                  <li>Interpretación rigurosa de planos de despiece, tolerancias dimensionales milimétricas y ensamblaje de estructuras complejas de mobiliario.</li>
+                  <li>Manejo seguro de maquinaria industrial (sierras de banco, fresadoras, cepillos, taladros de banco y pistolas neumáticas).</li>
+                  <li>Aplicación de barnices, lacas de alta durabilidad y tapizado técnico, consolidando una cultura de pulcritud, paciencia y atención extrema al detalle.</li>
+                </ul>
+              </article>
+            </div>
+          </section>
+
+          <!-- Courses & Official Certifications Table Panel -->
+          <section class="cv-panel" aria-labelledby="courses-heading">
+            <div class="cv-panel-header">
+              <h2 id="courses-heading" class="cv-panel-title">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                  <circle cx="12" cy="8" r="7" />
+                  <polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88" />
+                </svg>
+                Cursos de Especialización y Certificaciones
+              </h2>
+              <button type="button" class="btn btn--amber btn--sm no-print" onclick="openModal(0)">
+                Abrir Visor de Diplomas (7)
+              </button>
+            </div>
+
+            <div class="courses-table-wrap">
+              <table class="courses-table">
+                <thead>
+                  <tr>
+                    <th scope="col">Programa / Certificación</th>
+                    <th scope="col">Contenidos y Tecnologías</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>
+                      <strong>Master en Webs Full Stack</strong>
+                    </td>
+                    <td>
+                      Angular, Node.js, Laravel, Symfony + Programación de APIs RESTful: HTML5, CSS3, Angular, React-Vite, JavaScript y MySQL.
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <strong>Academia Desafío Latam</strong><br />
+                      <span class="badge badge--cyan" style="margin-top: 0.35rem;">4 Certificados Verificados</span>
+                    </td>
+                    <td>
+                      <strong>Desarrollo Full Stack JavaScript:</strong> Introducción al Desarrollo Web (14h, N° 26488), CSS Avanzado (40h, N° 27384), JavaScript para la Web (60h, N° 28921) y React I (40h, N° 29706).
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <strong>IFCT091PO (SEPE)</strong><br />
+                      Programación de Páginas Web JavaScript y PHP (65h)
+                    </td>
+                    <td>
+                      Programación cliente (JavaScript, DOM), programación servidor (PHP) y gestión de bases de datos. Expediente <code>F220174AA</code> · Registro <code>6xijBxKOKL</code>.
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <strong>IFCT026PO (SEPE)</strong><br />
+                      Cloud Computing: Windows Azure &amp; Linux (30h)
+                    </td>
+                    <td>
+                      <strong>Cloud Computing (Azure):</strong> Administración de Azure, virtualización, servicios, bases de datos, análisis, compilación, depuración e implementación.<br />
+                      <strong>Linux en la Nube:</strong> Distribuciones Linux, administración, virtualización, servicios, bases de datos y programación en la nube bajo Linux. Expediente <code>F220468AA</code>.
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <strong>IFCT050PO (SEPE)</strong><br />
+                      Gestión de la Seguridad Informática en la Empresa
+                    </td>
+                    <td>
+                      Políticas de seguridad, auditoría y normativa, estrategias de protección, exploración de redes, prevención de ataques remotos y locales, seguridad en redes inalámbricas, criptografía, criptoanálisis y autenticación. Expediente <code>F220582AA-476/21</code> · Código <code>1033059</code>.
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </section>
+        </div>
+      </div>
+
+      <!-- Full Verified Diplomas Gallery inside CV -->
+      <section id="galeria-diplomas" class="cv-panel" style="margin-top: 0.5rem;" aria-labelledby="gallery-cv-heading">
+        <div class="cv-panel-header">
+          <div>
+            <span class="eyebrow">Documentación Oficial</span>
+            <h2 id="gallery-cv-heading" class="cv-panel-title" style="margin-top: 0.25rem;">
+              Galería de Diplomas Verificados (SEPE &amp; Desafío Latam)
+            </h2>
+          </div>
+          <span class="badge badge--emerald">7 Certificados Autenticados</span>
+        </div>
+
+        <div class="certs-grid">
+          <!-- 1. SEPE JS & PHP -->
+          <article class="cert-card">
+            <button
+              type="button"
+              class="cert-thumb-btn"
+              data-lightbox-trigger
+              data-full-src="../PDF/diplomasepe1.png"
+              data-download="../PDF/Diploma-ALI_ALEJANDRO_ANDRADE_GODOY.pdf"
+              data-title="IFCT091PO — Programación de Páginas Web JavaScript y PHP"
+              data-subtitle="SEPE · Fundación Estatal / Coremsa Online · 65 horas · Octubre 2024 · Registro 6xijBxKOKL"
+            >
+              <picture>
+                <source srcset="../PDF/diplomasepe1.webp" type="image/webp" />
+                <img src="../PDF/diplomasepe1.png" alt="Diploma SEPE IFCT091PO Programación Páginas Web JavaScript y PHP" width="600" height="425" loading="lazy" decoding="async" />
+              </picture>
+              <span class="cert-zoom-hint">Ampliar ⤢</span>
+            </button>
+            <div class="cert-body">
+              <span class="badge badge--amber">SEPE · IFCT091PO</span>
+              <h3 class="cert-title">Programación Páginas Web JS y PHP</h3>
+              <div class="cert-meta">
+                <span>65 horas · Oct 2024</span>
+                <a href="../PDF/Diploma-ALI_ALEJANDRO_ANDRADE_GODOY.pdf" target="_blank" rel="noopener noreferrer">Abrir PDF ↗</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- 2. SEPE Cloud Computing -->
+          <article class="cert-card">
+            <button
+              type="button"
+              class="cert-thumb-btn"
+              data-lightbox-trigger
+              data-full-src="../PDF/diploma_ciber-seguridad.png"
+              data-download="../PDF/diploma-ciber.pdf"
+              data-title="IFCT026PO — Cloud Computing (Azure, Linux)"
+              data-subtitle="SEPE · Aula Directa · 30 horas · Octubre 2024 · Expediente F220468AA"
+            >
+              <picture>
+                <source srcset="../PDF/diploma_ciber-seguridad.webp" type="image/webp" />
+                <img src="../PDF/diploma_ciber-seguridad.png" alt="Diploma SEPE IFCT026PO Cloud Computing Azure y Linux" width="600" height="425" loading="lazy" decoding="async" />
+              </picture>
+              <span class="cert-zoom-hint">Ampliar ⤢</span>
+            </button>
+            <div class="cert-body">
+              <span class="badge badge--amber">SEPE · IFCT026PO</span>
+              <h3 class="cert-title">Cloud Computing (Azure, Linux)</h3>
+              <div class="cert-meta">
+                <span>30 horas · Oct 2024</span>
+                <a href="../PDF/diploma-ciber.pdf" target="_blank" rel="noopener noreferrer">Abrir PDF ↗</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- 3. SEPE Seguridad Informática -->
+          <article class="cert-card">
+            <button
+              type="button"
+              class="cert-thumb-btn"
+              data-lightbox-trigger
+              data-full-src="../PDF/Globas-cs.png"
+              data-download="../PDF/diploma,cs.pdf"
+              data-title="IFCT050PO — Gestión de la Seguridad Informática en la Empresa"
+              data-subtitle="SEPE · Skillsoft Global Knowledge Spain · Noviembre 2024 · Cód. 1033059"
+            >
+              <picture>
+                <source srcset="../PDF/Globas-cs.webp" type="image/webp" />
+                <img src="../PDF/Globas-cs.png" alt="Diploma SEPE IFCT050PO Gestión de la Seguridad Informática en la Empresa" width="600" height="425" loading="lazy" decoding="async" />
+              </picture>
+              <span class="cert-zoom-hint">Ampliar ⤢</span>
+            </button>
+            <div class="cert-body">
+              <span class="badge badge--amber">SEPE · IFCT050PO</span>
+              <h3 class="cert-title">Gestión de la Seguridad Informática</h3>
+              <div class="cert-meta">
+                <span>Nov 2024 · Cód. 1033059</span>
+                <a href="../PDF/diploma,cs.pdf" target="_blank" rel="noopener noreferrer">Abrir PDF ↗</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- 4. Desafío Latam JS -->
+          <article class="cert-card">
+            <button
+              type="button"
+              class="cert-thumb-btn"
+              data-lightbox-trigger
+              data-full-src="../PDF/js.png"
+              data-download="../PDF/js.png"
+              data-title="JavaScript para la Web — Academia Desafío Latam"
+              data-subtitle="Certificado N° 28921 · 60 horas · 22 de abril de 2024"
+            >
+              <picture>
+                <source srcset="../PDF/js.webp" type="image/webp" />
+                <img src="../PDF/js.png" alt="Certificado Desafío Latam JavaScript para la Web" width="600" height="425" loading="lazy" decoding="async" />
+              </picture>
+              <span class="cert-zoom-hint">Ampliar ⤢</span>
+            </button>
+            <div class="cert-body">
+              <span class="badge badge--cyan">Desafío Latam · N° 28921</span>
+              <h3 class="cert-title">JavaScript para la Web</h3>
+              <div class="cert-meta">
+                <span>60 horas · Abr 2024</span>
+                <a href="../PDF/js.png" target="_blank" rel="noopener noreferrer">Imagen HD ↗</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- 5. Desafío Latam React I -->
+          <article class="cert-card">
+            <button
+              type="button"
+              class="cert-thumb-btn"
+              data-lightbox-trigger
+              data-full-src="../PDF/react.png"
+              data-download="../PDF/react.png"
+              data-title="React I — Academia Desafío Latam"
+              data-subtitle="Certificado N° 29706 · 40 horas · 6 de marzo de 2024"
+            >
+              <picture>
+                <source srcset="../PDF/react.webp" type="image/webp" />
+                <img src="../PDF/react.png" alt="Certificado Desafío Latam React I" width="600" height="425" loading="lazy" decoding="async" />
+              </picture>
+              <span class="cert-zoom-hint">Ampliar ⤢</span>
+            </button>
+            <div class="cert-body">
+              <span class="badge badge--cyan">Desafío Latam · N° 29706</span>
+              <h3 class="cert-title">React I</h3>
+              <div class="cert-meta">
+                <span>40 horas · Mar 2024</span>
+                <a href="../PDF/react.png" target="_blank" rel="noopener noreferrer">Imagen HD ↗</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- 6. Desafío Latam CSS Avanzado -->
+          <article class="cert-card">
+            <button
+              type="button"
+              class="cert-thumb-btn"
+              data-lightbox-trigger
+              data-full-src="../PDF/css.png"
+              data-download="../PDF/css.png"
+              data-title="CSS Avanzado — Academia Desafío Latam"
+              data-subtitle="Certificado N° 27384 · 40 horas · 1 de febrero de 2024"
+            >
+              <picture>
+                <source srcset="../PDF/css.webp" type="image/webp" />
+                <img src="../PDF/css.png" alt="Certificado Desafío Latam CSS Avanzado" width="600" height="425" loading="lazy" decoding="async" />
+              </picture>
+              <span class="cert-zoom-hint">Ampliar ⤢</span>
+            </button>
+            <div class="cert-body">
+              <span class="badge badge--cyan">Desafío Latam · N° 27384</span>
+              <h3 class="cert-title">CSS Avanzado</h3>
+              <div class="cert-meta">
+                <span>40 horas · Feb 2024</span>
+                <a href="../PDF/css.png" target="_blank" rel="noopener noreferrer">Imagen HD ↗</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- 7. Desafío Latam Intro Web -->
+          <article class="cert-card">
+            <button
+              type="button"
+              class="cert-thumb-btn"
+              data-lightbox-trigger
+              data-full-src="../PDF/iweb.png"
+              data-download="../PDF/iweb.png"
+              data-title="Introducción al Desarrollo Web — Academia Desafío Latam"
+              data-subtitle="Certificado N° 26488 · 14 horas · 30 de octubre de 2023"
+            >
+              <picture>
+                <source srcset="../PDF/iweb.webp" type="image/webp" />
+                <img src="../PDF/iweb.png" alt="Certificado Desafío Latam Introducción al Desarrollo Web" width="600" height="425" loading="lazy" decoding="async" />
+              </picture>
+              <span class="cert-zoom-hint">Ampliar ⤢</span>
+            </button>
+            <div class="cert-body">
+              <span class="badge badge--cyan">Desafío Latam · N° 26488</span>
+              <h3 class="cert-title">Introducción al Desarrollo Web</h3>
+              <div class="cert-meta">
+                <span>14 horas · Oct 2023</span>
+                <a href="../PDF/iweb.png" target="_blank" rel="noopener noreferrer">Imagen HD ↗</a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <!-- Accessible Lightbox Modal -->
+  <div id="lightboxModal" class="lightbox-modal" role="dialog" aria-modal="true" aria-hidden="true" aria-labelledby="lightboxTitle">
+    <div class="lightbox-dialog">
+      <div class="lightbox-header">
+        <div class="lightbox-title-group">
+          <h2 id="lightboxTitle" class="lightbox-title" data-lightbox-title>Certificado Verificado</h2>
+          <p class="lightbox-subtitle" data-lightbox-subtitle></p>
+        </div>
+        <button type="button" class="btn btn--ghost btn--sm" data-lightbox-close aria-label="Cerrar visor de certificado">
+          ✕ Cerrar (Esc)
+        </button>
+      </div>
+      <div class="lightbox-body">
+        <img src="../PDF/diplomasepe1.png" alt="Vista ampliada del diploma" data-lightbox-img />
+      </div>
+      <div class="lightbox-footer">
+        <div class="lightbox-nav">
+          <button type="button" class="btn btn--secondary btn--sm" data-lightbox-prev aria-label="Certificado anterior">← Anterior</button>
+          <span class="badge" data-lightbox-counter>1 / 7</span>
+          <button type="button" class="btn btn--secondary btn--sm" data-lightbox-next aria-label="Certificado siguiente">Siguiente →</button>
+        </div>
+        <div class="lightbox-nav">
+          <a class="btn btn--primary btn--sm" href="../PDF/Diploma-ALI_ALEJANDRO_ANDRADE_GODOY.pdf" target="_blank" rel="noopener noreferrer" data-lightbox-download>
+            Abrir original / Descargar ↗
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Global Footer -->
+  <footer class="site-footer">
+    <div class="site-container footer-inner">
+      <div>
+        <strong>Ali Alejandro Andrade Godoy</strong> · Currículum Vitae y Credenciales Oficiales
+      </div>
+      <nav class="footer-links" aria-label="Enlaces del pie de página">
+        <a href="../../index.html">Inicio</a>
+        <a href="./cv.html" aria-current="page">Currículum Vitae</a>
+        <a href="./proyects.html">Proyectos</a>
+        <a href="./qr.html">Tarjeta QR</a>
+        <a href="https://github.com/ali-ajelandrox" target="_blank" rel="noopener noreferrer">GitHub</a>
+        <a href="https://www.linkedin.com/in/alejandro-andrade-1a38a7331" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+      </nav>
+    </div>
+  </footer>
+  </div>
+
+  <script src="../../dist/assets/portfolio-bundle.js" defer></script>
+  <script src="../../scripts/index.js" defer></script>
+  <script src="../../scripts/modal.js" defer></script>
+  <script type="module" src="../../src/main.js"></script>
 </body>
 
 </html>

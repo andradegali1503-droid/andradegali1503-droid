@@ -1,0 +1,20 @@
+{
+  "name": "ali-andrade-quantum-portfolio",
+  "private": true,
+  "version": "2.0.0",
+  "description": "Interactive Creative Web Experience & React Portfolio of Ali Alejandro Andrade Godoy — Front-End & Full-Stack Engineer + IT Systems Specialist",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build && node -e \"const fs = require('fs'); const css = fs.readFileSync('src/styles/quantum-craft.css','utf8') + '\\n' + fs.readFileSync('src/styles/manga-editorial.css','utf8'); fs.writeFileSync('dist/assets/portfolio-bundle.css', css);\"",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "gsap": "3.12.5",
+    "react": "18.3.1",
+    "react-dom": "18.3.1"
+  },
+  "devDependencies": {
+    "vite": "5.4.8"
+  }
+}
