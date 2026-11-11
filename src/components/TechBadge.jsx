@@ -319,6 +319,115 @@ export const TECH_REGISTRY = {
       </svg>
     )
   },
+  typescript: {
+    key: 'typescript',
+    label: 'TypeScript',
+    brandColor: '#3178C6',
+    bgColor: 'rgba(49, 120, 198, 0.14)',
+    svg: (
+      <svg viewBox="0 0 24 24" className="tech-icon-svg" aria-hidden="true">
+        <rect width="24" height="24" rx="3.5" fill="#3178C6" />
+        <path d="M4 8.5h6v1.8H7.8v7.2H5.8v-7.2H4V8.5zm7.5 5.8c.6.7 1.4 1.1 2.3 1.1.9 0 1.5-.4 1.5-1 0-.7-.5-1-1.7-1.4l-.6-.2c-1.8-.7-3-1.6-3-3.3 0-1.8 1.4-3.2 3.5-3.2 1.5 0 2.6.5 3.3 1.7l-1.4 1c-.4-.7-1-1-1.9-1-.8 0-1.3.4-1.3 1 0 .6.4.9 1.5 1.3l.6.2c2.1.8 3.2 1.7 3.2 3.5 0 2-1.6 3.3-3.8 3.3-1.9 0-3.1-.7-3.9-2.1l1.2-.9z" fill="#fff" />
+      </svg>
+    )
+  },
+  nextjs: {
+    key: 'nextjs',
+    label: 'Next.js 14',
+    brandColor: '#000000',
+    bgColor: 'rgba(0, 0, 0, 0.12)',
+    svg: (
+      <svg viewBox="0 0 24 24" className="tech-icon-svg" aria-hidden="true">
+        <circle cx="12" cy="12" r="11" fill="#000" />
+        <path d="M7 7h2.2v10H7V7zm3.5 0h2.4l4.5 6.7V7h2v10h-2.1L12.5 9.8V17h-2V7z" fill="#fff" />
+      </svg>
+    )
+  },
+  angular: {
+    key: 'angular',
+    label: 'Angular 18',
+    brandColor: '#DD0031',
+    bgColor: 'rgba(221, 0, 49, 0.14)',
+    svg: (
+      <svg viewBox="0 0 24 24" className="tech-icon-svg" aria-hidden="true">
+        <path fill="#DD0031" d="M12 2L2.5 5.4l1.4 12.3L12 22l8.1-4.3 1.4-12.3L12 2z" />
+        <path fill="#C3002F" d="M12 2v20l8.1-4.3 1.4-12.3L12 2z" />
+        <path fill="#fff" d="M12 5.5l-4.5 10.2h1.8l.9-2.3h3.6l.9 2.3h1.8L12 5.5zm-1.1 6.3l1.1-2.8 1.1 2.8h-2.2z" />
+      </svg>
+    )
+  },
+  express: {
+    key: 'express',
+    label: 'Express',
+    brandColor: '#2563EB',
+    bgColor: 'rgba(37, 99, 235, 0.12)',
+    svg: (
+      <svg viewBox="0 0 24 24" className="tech-icon-svg" aria-hidden="true">
+        <rect width="24" height="24" rx="4" fill="#0f172a" />
+        <path d="M5 8h4.5v1.8H6.8v2h2.5v1.8H6.8v2.6H5V8zm6.5 0h2.2l1.6 3.2 1.6-3.2h2.2l-2.7 4.2 2.9 4H17l-1.8-3.4-1.8 3.4h-2.3l3-4.1-2.6-4.1z" fill="#38bdf8" />
+      </svg>
+    )
+  },
+  jwt: {
+    key: 'jwt',
+    label: 'JWT',
+    brandColor: '#FB015B',
+    bgColor: 'rgba(251, 1, 91, 0.14)',
+    svg: (
+      <svg viewBox="0 0 24 24" className="tech-icon-svg" aria-hidden="true">
+        <circle cx="12" cy="12" r="10" fill="#FB015B" />
+        <path d="M7 8h2v5.5c0 1.2-.7 1.8-1.8 1.8-.4 0-.8-.1-1-.2l.3-1.4c.2.1.4.1.5.1.4 0 .6-.2.6-.6V8zm3 0h1.8l1.3 4.2L14.4 8h1.8v7.2h-1.6V10l-1.2 3.8h-1L11.2 10v5.2H9.6V8z" fill="#fff" />
+      </svg>
+    )
+  },
+  jest: {
+    key: 'jest',
+    label: 'Jest',
+    brandColor: '#C21325',
+    bgColor: 'rgba(194, 19, 37, 0.14)',
+    svg: (
+      <svg viewBox="0 0 24 24" className="tech-icon-svg" aria-hidden="true">
+        <path fill="#C21325" d="M12 2C6.5 2 2 6.5 2 12c0 2.8 1.1 5.3 3 7.1V22l3.4-1.5c1.1.4 2.3.5 3.6.5 5.5 0 10-4.5 10-10S17.5 2 12 2zm-1 14.5l-3.5-3.5 1.4-1.4 2.1 2.1 5.1-5.1 1.4 1.4L11 16.5z" />
+      </svg>
+    )
+  },
+  supabase: {
+    key: 'supabase',
+    label: 'Supabase',
+    brandColor: '#3ECF8E',
+    bgColor: 'rgba(62, 207, 142, 0.14)',
+    svg: (
+      <svg viewBox="0 0 24 24" className="tech-icon-svg" aria-hidden="true">
+        <path fill="#3ECF8E" d="M13.4 2.2a1 1 0 00-1.7-.1L2.2 15.3a1 1 0 001.3 1.4l7.1-4v5.1a1 1 0 001.7.1l9.5-13.2a1 1 0 00-1.3-1.4l-7.1 3.9V2.2z" />
+      </svg>
+    )
+  },
+  framermotion: {
+    key: 'framermotion',
+    label: 'Framer Motion',
+    brandColor: '#0055FF',
+    bgColor: 'rgba(0, 85, 255, 0.14)',
+    svg: (
+      <svg viewBox="0 0 24 24" className="tech-icon-svg" aria-hidden="true">
+        <path fill="#0055FF" d="M4 2h16v8h-8zM4 10h8l8 8H4zM4 18h8v4L4 18z" />
+      </svg>
+    )
+  },
+  webaudio: {
+    key: 'webaudio',
+    label: 'Web Audio API',
+    brandColor: '#10B981',
+    bgColor: 'rgba(16, 185, 129, 0.14)',
+    svg: (
+      <svg viewBox="0 0 24 24" className="tech-icon-svg" aria-hidden="true">
+        <rect x="3" y="10" width="2" height="4" rx="1" fill="#10B981" />
+        <rect x="7" y="6" width="2" height="12" rx="1" fill="#10B981" />
+        <rect x="11" y="3" width="2" height="18" rx="1" fill="#10B981" />
+        <rect x="15" y="7" width="2" height="10" rx="1" fill="#10B981" />
+        <rect x="19" y="10" width="2" height="4" rx="1" fill="#10B981" />
+      </svg>
+    )
+  },
   default: {
     key: 'default',
     label: 'Tech',
@@ -366,6 +475,15 @@ export function getTechInfo(name) {
   if (n.includes('firebase')) return TECH_REGISTRY.firebase;
   if (n.includes('vite')) return TECH_REGISTRY.vite;
   if (n.includes('webgl') || n.includes('glsl') || n.includes('shader')) return TECH_REGISTRY.webgl;
+  if (n.includes('typescript') || n === 'ts') return TECH_REGISTRY.typescript;
+  if (n.includes('next') || n.includes('nextjs')) return TECH_REGISTRY.nextjs;
+  if (n.includes('angular')) return TECH_REGISTRY.angular;
+  if (n.includes('express')) return TECH_REGISTRY.express;
+  if (n.includes('jwt') || n.includes('token')) return TECH_REGISTRY.jwt;
+  if (n.includes('jest') || n.includes('testing')) return TECH_REGISTRY.jest;
+  if (n.includes('supabase')) return TECH_REGISTRY.supabase;
+  if (n.includes('framer') || n.includes('motion')) return TECH_REGISTRY.framermotion;
+  if (n.includes('audio') || n.includes('sound')) return TECH_REGISTRY.webaudio;
   if (n.includes('figma')) return TECH_REGISTRY.figma;
 
   return TECH_REGISTRY.default;

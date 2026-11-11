@@ -88,7 +88,7 @@ export function CommandPalette({
       {
         id: 'act-github',
         category: 'Contacto',
-        label: 'Abrir Perfil de GitHub (@ali-ajelandrox)',
+        label: `Abrir Perfil de GitHub (${OWNER_PROFILE.handle})`,
         shortcut: 'GH',
         action: () => window.open(OWNER_PROFILE.githubUrl, '_blank', 'noopener,noreferrer')
       }

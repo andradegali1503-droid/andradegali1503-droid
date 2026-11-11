@@ -20,7 +20,7 @@ export function resolveAsset(path) {
 export const OWNER_PROFILE = {
   fullName: 'Ali Alejandro Andrade Godoy',
   shortName: 'Ali Andrade',
-  handle: '@ali-ajelandrox',
+  handle: '@andradegali1503-droid',
   rolePrimary: 'Front-End & Full-Stack Web Developer',
   roleSecondary: 'TSU en Informática · Cloud Azure/Linux, Ciberseguridad & Operaciones ERP',
   tagline: 'Ingeniería de software e interfaces interactivas con rigor de producción, respaldada por más de 6 años resolviendo infraestructura crítica, redes industriales y logística empresarial.',
@@ -31,9 +31,9 @@ export const OWNER_PROFILE = {
   phoneRaw: '+34642834742',
   emailPrimary: 'Andradegali1503@gmail.com',
   emailSecondary: 'Ajelandrox15@gmail.com',
-  githubUrl: 'https://github.com/ali-ajelandrox',
-  githubReposUrl: 'https://github.com/ali-ajelandrox?tab=repositories',
-  linkedinUrl: 'https://www.linkedin.com/in/alejandro-andrade-1a38a7331',
+  githubUrl: 'https://github.com/andradegali1503-droid',
+  githubReposUrl: 'https://github.com/andradegali1503-droid?tab=repositories',
+  linkedinUrl: 'https://www.linkedin.com/in/alejandro-andrade-dev/',
   facebookUrl: 'https://www.facebook.com/profile.php?id=61566637568962',
   whatsappUrl: 'https://api.whatsapp.com/send?phone=34642834742&text=%C2%A1Hola%20Ali!%20He%20revisado%20tu%20perfil%20profesional%20y%20me%20gustar%C3%ADa%20conversar%20sobre%20una%20oportunidad.',
   photoRealWebp: resolveAsset('/assets/img/ali_perfil.webp'),
@@ -132,135 +132,144 @@ export const PROJECTS_DATA = [
     stack: ['HTML5 Semántico', 'CSS3 Animations', 'JavaScript ES6+', 'UI Inmersiva', 'Firebase Hosting']
   },
   {
-    id: 'cuppon-platform',
+    id: 'atelier-noir-mesaclick',
     index: '02',
     featured: false,
-    title: 'Cuppon Platform',
-    subtitle: 'E-Commerce UI & Catálogo Promocional Responsivo',
-    category: 'bootstrap',
-    categoryLabel: 'Bootstrap 5 & E-Commerce UI',
-    year: '2024',
-    status: 'LIVE DEMO // REPO SANDBOX',
-    imageWebp: resolveAsset('/assets/img/desafio-4.webp'),
-    imageFallback: resolveAsset('/assets/img/desafio-4.PNG'),
-    liveUrl: resolveAsset('/assets/Routes/Ali-andrade-desafio-4/index.html'),
-    canEmbedSandbox: true,
-    accentColor: '#10b981',
-    tagline: 'Arquitectura de grillas adaptables y tarjetas comerciales de conversión.',
+    title: "MesaClick — Luxury Restaurant Suite",
+    subtitle: "Sistema de Reservas 5 Estrellas & Consola del Maître d'",
+    category: 'fullstack',
+    categoryLabel: 'Proyecto Final 4Geeks Academy',
+    year: '2026',
+    status: 'FULL STACK // MONGO + NODE + REACT',
+    imageWebp: resolveAsset('/src/img/proyecto-final.webp'),
+    imageFallback: resolveAsset('/src/img/proyecto-final.png'),
+    liveUrl: 'https://proyect-final-4geeks.vercel.app',
+    githubUrl: 'https://github.com/andradegali1503-droid/proyect-final-4geeks',
+    canEmbedSandbox: false,
+    accentColor: '#d4af37',
+    tagline: 'Alta gastronomía y hospitalidad digital con plano de sala interactivo en tiempo real.',
     description:
-      'Plataforma de ofertas y descuentos construida con HTML5, CSS3 y Bootstrap 5.3. Implementa un catálogo comercial multi-categoría (hogar, gastronomía, salud y viajes) con comparativa clara de precios originales vs. promocionales.',
+      "Plataforma integral de gestión de reservas concebida para restaurantes de alta cocina (5 estrellas / estrella Michelin), desarrollada como Proyecto Final en 4Geeks Academy. Incluye plano de sala interactivo para el Maître d', gestión de turnos VIP, validación de alérgenos, confirmaciones automáticas por email (EmailJS) y consola administrativa protegida por JWT y Bcrypt.",
     challenge:
-      'Estructurar tarjetas con longitud de texto variable, metadatos de dirección física e indicadores de precio manteniendo alineación perfecta en móvil, tablet y escritorio.',
+      'Sincronizar en tiempo real el estado de ocupación de las mesas con validaciones estrictas de solapamiento horario y control de aforo por servicio.',
     architecture: [
-      'Sistema de grillas responsivas Bootstrap 5.3 con Navbar colapsable accesible.',
-      'Jerarquía tipográfica Raleway + Roboto e iconografía vectorial FontAwesome para geolocalización.',
-      'Sección de captación de leads (newsletter de cupones) integrada en el flujo inferior.'
+      'Backend RESTful en Node.js, Express y MongoDB con esquemas Mongoose para reservas, comensales y mesas.',
+      'Frontend reactivo con React, Bootstrap 5, React Router y Lucide Icons.',
+      'Seguridad con tokens JWT, hashing de credenciales Bcrypt y suite de pruebas automatizadas con Jest.'
     ],
-    stack: ['HTML5', 'CSS3', 'Bootstrap 5.3', 'FontAwesome', 'Responsive Grid']
+    stack: ['React', 'Node.js', 'Express', 'MongoDB', 'JWT', 'Bootstrap 5', 'Jest']
   },
   {
-    id: 'iguana-page',
+    id: 'star-wars-database',
     index: '03',
     featured: false,
-    title: 'Iguana Page',
-    subtitle: 'Maquetación Editorial Dark UI desde Especificación Figma',
-    category: 'flexbox',
-    categoryLabel: 'CSS Flexbox & Figma to Code',
-    year: '2023–2024',
-    status: 'LIVE DEMO // REPO SANDBOX',
-    imageWebp: resolveAsset('/assets/img/desafio-3.webp'),
-    imageFallback: resolveAsset('/assets/img/desafio-3.PNG'),
-    liveUrl: resolveAsset('/assets/Routes/Ali-andrade-desafio-3/index.html'),
-    canEmbedSandbox: true,
-    accentColor: '#00f0ff',
-    tagline: 'Fidelidad pixel-perfect traduciendo maquetas de diseño a código semántico.',
+    title: 'Star Wars — Galactic Database',
+    subtitle: 'Base de Datos Canónica & Visor Interactivo SWAPI',
+    category: 'frontend',
+    categoryLabel: 'React 18 + TypeScript + SWAPI',
+    year: '2026',
+    status: 'CANON ARCHIVES // VITE + TAILWIND',
+    imageWebp: resolveAsset('/src/img/proj-starwars.webp'),
+    imageFallback: resolveAsset('/src/img/proj-starwars.png'),
+    liveUrl: 'https://github.com/andradegali1503-droid/STARS-WARS-BLOG-4GEEKS',
+    githubUrl: 'https://github.com/andradegali1503-droid/STARS-WARS-BLOG-4GEEKS',
+    canEmbedSandbox: false,
+    accentColor: '#ffe81f',
+    tagline: 'Experiencia cinematográfica inmersiva para explorar el archivo canónico de Star Wars.',
     description:
-      'Landing page documental de estética oscura desarrollada a partir de una maqueta técnica en Figma. Demuestra el dominio de alineación espacial, distribución de bloques y contraste visual con CSS Flexbox.',
+      'Aplicación web inmersiva desarrollada con React 18, TypeScript y Tailwind CSS conectada a la API REST oficial de Star Wars (SWAPI). Permite consultar personajes, planetas y vehículos con especificaciones técnicas detalladas, gestión global de favoritos mediante Context API sincronizado en LocalStorage y animaciones fluidas con Framer Motion.',
     challenge:
-      'Reproducir con exactitud las proporciones, espaciados, pesos tipográficos (Raleway 200/300/500) y bloques iconográficos definidos en el sistema de diseño original.',
+      'Manejar la asincronía y el paginado de múltiples endpoints de SWAPI optimizando tiempos de respuesta y caché de datos en el cliente.',
     architecture: [
-      'Maquetación semántica por secciones (Header, Hero Banner, Sinopsis Bi-columna, Características e Iconos, Galería Triple).',
-      'Distribución flexible mediante contenedores CSS Flexbox e integración de activos optimizados.'
+      'Arquitectura modular basada en componentes funcionales con TypeScript para control estricto de tipos de la API.',
+      'Gestión de estado global con React Context API y sincronización reactiva en LocalStorage.',
+      'Diseño visual cinematográfico y microinteracciones coreografiadas con Framer Motion y Tailwind CSS.'
     ],
-    stack: ['HTML5 Semántico', 'CSS3 Flexbox', 'Figma Specs', 'Raleway Typography', 'Dark UI']
+    stack: ['React 18', 'TypeScript', 'Tailwind CSS', 'Framer Motion', 'Vite', 'REST APIs']
   },
   {
-    id: 'cosset-muebles',
+    id: 'optica-management-pro',
     index: '04',
     featured: false,
-    title: 'Cosset Muebles',
-    subtitle: 'Catálogo Digital de Mobiliario y Camas a Medida',
-    category: 'fundamentos',
-    categoryLabel: 'Landing Comercial · Sector Real',
-    year: '2023',
-    status: 'LIVE DEMO // REPO SANDBOX',
-    imageWebp: resolveAsset('/assets/img/desafio-2.webp'),
-    imageFallback: resolveAsset('/assets/img/desafio-2.PNG'),
-    liveUrl: resolveAsset('/assets/Routes/Ali_andrade-desafio-2/index.html'),
-    canEmbedSandbox: true,
-    accentColor: '#f59e0b',
-    tagline: 'Conexión directa entre el oficio real de mueblería y el catálogo web.',
+    title: 'Óptica Management Pro',
+    subtitle: 'Gestión Clínica, Graduaciones & E-Commerce Oftalmológico',
+    category: 'fullstack',
+    categoryLabel: 'Next.js 14 + Supabase',
+    year: '2026',
+    status: 'ENTERPRISE APP // NEXT.JS + SUPABASE',
+    imageWebp: resolveAsset('/src/img/proj-optica.webp'),
+    imageFallback: resolveAsset('/src/img/proj-optica.png'),
+    liveUrl: 'https://github.com/andradegali1503-droid/optica-beta',
+    githubUrl: 'https://github.com/andradegali1503-droid/optica-beta',
+    canEmbedSandbox: false,
+    accentColor: '#0ea5e9',
+    tagline: 'Digitalización completa para ópticas: desde el examen visual hasta el control de stock.',
     description:
-      'Landing comercial inspirada en la experiencia laboral real de Ali en fabricación y acabado de muebles (Cossette Muebles). Presenta líneas de camas hechas a medida (1 plaza, 1.5 plazas y 2 plazas) con precios y enlace social.',
+      'Plataforma empresarial moderna diseñada en Next.js 14 (App Router) y TypeScript para ópticas y clínicas visuales. Centraliza fichas clínicas de pacientes, cálculo de fórmulas dióptricas (esfera, cilindro, eje), agenda de citas con recordatorios, control de stock de monturas y auditoría de ventas en tiempo real con Supabase y TanStack Table.',
     challenge:
-      'Organizar un catálogo claro de productos físicos con sus dimensiones, fotografías de referencia y precios de venta junto a un canal directo de atención en Instagram.',
+      'Implementar validación matemática precisa para fórmulas ópticas y agudeza visual garantizando interfaz intuitiva para el optometrista bajo presión.',
     architecture: [
-      'Hojas de estilo CSS personalizadas con identidad cálida inspirada en madera y taller.',
-      'Estructura tabular de catálogo de productos con favicon e integración a redes.'
+      'Arquitectura moderna con Next.js 14 App Router, Server Components y renderizado optimizado.',
+      'Base de datos relacional y autenticación en la nube con Supabase.',
+      'Tablas interactivas con TanStack Table, accesibilidad WCAG con Radix UI primitives y animaciones de métricas con GSAP.'
     ],
-    stack: ['HTML5', 'CSS3', 'Catálogo de Productos', 'Identidad Comercial']
+    stack: ['Next.js 14', 'React 18', 'TypeScript', 'Tailwind CSS', 'Supabase', 'GSAP']
   },
   {
-    id: 'quantum-portfolio-engine',
+    id: 'pokedex-gameboy-advance',
     index: '05',
     featured: false,
-    title: 'Quantum Craft Portfolio OS',
-    subtitle: 'Arquitectura React + GSAP Motion + WebGL Shader Experience',
-    category: 'produccion',
-    categoryLabel: 'React + GSAP + WebGL',
+    title: 'Pokédex Pokémon Esmeralda (GBA)',
+    subtitle: 'Recreación Fiel Game Boy Advance con Web Audio API',
+    category: 'frontend',
+    categoryLabel: 'Angular 18 + Pixel Art CSS',
     year: '2024–2026',
-    status: 'ACTIVE // GITHUB PAGES',
-    imageWebp: resolveAsset('/src/PDF/diplomasepe1.webp'),
-    imageFallback: resolveAsset('/src/PDF/diplomasepe1.png'),
-    liveUrl: 'https://github.com/ali-ajelandrox/ali-ajelandrox.github.io',
+    status: 'RETRO APP // ANGULAR 18',
+    imageWebp: resolveAsset('/src/img/proj-pokedex.webp'),
+    imageFallback: resolveAsset('/src/img/proj-pokedex.png'),
+    liveUrl: 'https://github.com/andradegali1503-droid/pokex-gamboy',
+    githubUrl: 'https://github.com/andradegali1503-droid/pokex-gamboy',
     canEmbedSandbox: false,
-    accentColor: '#00f0ff',
-    tagline: 'El propio portafolio como demostración viva de ingeniería creativa.',
+    accentColor: '#10b981',
+    tagline: 'Nostalgia y precisión: emulación interactiva pixel-perfect de la consola portátil clásica.',
     description:
-      'Aplicación interactiva construida en React, GSAP y WebGL puro (GLSL Shaders). Integra transiciones de página tipo cortina, tipografía cinética, comando global (Ctrl+K), terminal interactiva de telemetría, visor de diplomas y simulador responsivo de demos.',
+      'Recreación fiel de la interfaz de la Pokédex de Pokémon Edición Esmeralda (Game Boy Advance, 2004) desarrollada con Angular 18 y TypeScript. Incluye motor de sonido chiptune retro mediante Web Audio API, navegación por cruceta D-Pad táctil/teclado, filtrado instantáneo por tipos/hábitats y consumo en tiempo real de PokeAPI.',
     challenge:
-      'Transformar un portafolio estático tradicional en una experiencia digital memorable de nivel estudio creativo manteniendo carga instantánea, accesibilidad por teclado y 0 datos inventados.',
+      'Emular la estética pixel-art nativa sin desenfoques de renderizado (image-rendering: pixelated) y sincronizar los efectos sonoros de 8 bits con cero latencia.',
     architecture: [
-      'Motor de shaders WebGL en tiempo real reactivo a coordenadas del puntero y modo de personalidad.',
-      'Coreografía GSAP con física magnética, tarjetas 3D con spotlight radial y cortina de transición entre vistas.',
-      'Optimización del 93.7% en activos multimedia mediante conversión a WebP y arquitectura híbrida compatible con Vite y GitHub Pages.'
+      'Componentes standalone en Angular 18 con Signals y directivas reactivas de alto rendimiento.',
+      'Sintetizador Web Audio API para reproducción de beeps y clics mecánicos de botones GBA.',
+      'Diseño modular CSS3 pixel-art fiel a la resolución nativa de 240x160 escalada responsive.'
     ],
-    stack: ['React 18', 'GSAP 3', 'WebGL / GLSL Shaders', 'Vite', 'Interactive Terminal']
+    stack: ['Angular 18', 'TypeScript', 'CSS3', 'Web Audio API', 'REST APIs']
   },
   {
-    id: 'cv-html-foundation',
+    id: 'novamarket-ecommerce',
     index: '06',
     featured: false,
-    title: 'CV Semántico Fundacional',
-    subtitle: 'Primer Hito de Estructura Documental HTML5',
-    category: 'fundamentos',
-    categoryLabel: 'Archivo Fundacional HTML',
-    year: '2023',
-    status: 'ARCHIVE // REPO SANDBOX',
-    imageWebp: resolveAsset('/assets/img/desafio-1.webp'),
-    imageFallback: resolveAsset('/assets/img/desafio-1.png'),
-    liveUrl: resolveAsset('/assets/Routes/Ali_andrade/curriculum%20vitale/index.html'),
-    canEmbedSandbox: true,
-    accentColor: '#94a3b8',
-    tagline: 'El punto de partida que documenta la evolución técnica en el repositorio.',
+    title: 'NovaMarket E-Commerce Full-Stack',
+    subtitle: 'Plataforma Comercial con Carrito Reactivo, Firebase & Node.js',
+    category: 'fullstack',
+    categoryLabel: 'E-Commerce Full-Stack',
+    year: '2024–2026',
+    status: 'FULL STACK // REACT + EXPRESS + MONGO',
+    imageWebp: resolveAsset('/src/img/proj-ecommerce.webp'),
+    imageFallback: resolveAsset('/src/img/proj-ecommerce.png'),
+    liveUrl: 'https://github.com/ali-ajelandrox/e-commerce-v1',
+    githubUrl: 'https://github.com/ali-ajelandrox/e-commerce-v1',
+    canEmbedSandbox: false,
+    accentColor: '#a855f7',
+    tagline: 'Solución integral de comercio electrónico: catálogo, pasarela, autenticación y stock.',
     description:
-      'Primer ejercicio del módulo de Introducción al Desarrollo Web en Academia Desafío Latam. Conservado en el repositorio como testimonio transparente del progreso desde el HTML puro hasta la arquitectura React + WebGL actual.',
+      'Tienda digital full-stack con arquitectura desacoplada: frontend SPA en React y Material UI (MUI), y backend API REST en Node.js y Express con persistencia en MongoDB y Firebase Authentication. Incluye catálogo interactivo con filtros multicriterio, gestión de carrito con cálculo dinámico de impuestos/envío y panel administrativo para carga y modificación de productos.',
     challenge:
-      'Comprender la estructura jerárquica del DOM, listas ordenadas/desordenadas, atributos de imagen e hipervínculos relativos entre páginas.',
+      'Garantizar la consistencia del carrito de compras y la seguridad de los pedidos mediante tokens JWT y validaciones tanto en cliente como en servidor.',
     architecture: [
-      'Documento HTML5 nativo con vinculación a sub-tabla de portafolio inicial.'
+      'Frontend modular en React con Vite, Material UI y llamadas asíncronas con Axios.',
+      'Backend Express con middleware de autenticación JWT y control de subida de imágenes.',
+      'Almacenamiento de datos transaccionales en MongoDB y sesiones seguras con Firebase.'
     ],
-    stack: ['HTML5 Nativo', 'Semántica Documental', 'Rutas Relativas']
+    stack: ['React', 'Node.js', 'Express', 'MongoDB', 'Firebase', 'Bootstrap 5', 'REST APIs']
   }
 ];
 
@@ -608,7 +617,7 @@ export const COMPLEMENTARY_CRAFT = [
 export const ATS_PLAINTEXT_CV = `ALI ALEJANDRO ANDRADE GODOY
 TSU en Informática | Desarrollador Web Front-End & Full-Stack | Sistemas IT & Cloud
 España | Tel: +34 642 83 47 42 | Email: Andradegali1503@gmail.com / Ajelandrox15@gmail.com
-LinkedIn: linkedin.com/in/alejandro-andrade-1a38a7331 | GitHub: github.com/ali-ajelandrox
+LinkedIn: linkedin.com/in/alejandro-andrade-1a38a7331 | GitHub: github.com/andradegali1503-droid
 
 ================================================================================
 PERFIL PROFESIONAL
@@ -685,4 +694,31 @@ CERTIFICACIONES OFICIALES Y FORMACIÓN CONTINUA
   - JavaScript para la Web (60h) · Certificado N° 28921.
   - CSS Avanzado (40h) · Certificado N° 27384.
   - Introducción al Desarrollo Web (14h) · Certificado N° 26488.
+
+================================================================================
+PROYECTOS DESTACADOS & SOFTWARE LAB
+================================================================================
+* Sombra de Valoria: Portal Web Inmersivo RPG Fantasía (Producción Web / Firebase)
+  Live: https://sombra-de-valoria.web.app/
+  Stack: React 18, JavaScript ES6+, GSAP 3, HTML5 Semántico, Firebase Hosting.
+
+* L'Atelier Noir — Luxury Restaurant Reservation Suite (Proyecto Final 4Geeks Academy)
+  GitHub: https://github.com/andradegali1503-droid/proyect-final-4geeks
+  Stack: React, Node.js, Express, MongoDB, JWT, Bootstrap 5, Jest Testing.
+
+* Star Wars — Galactic Database & Holocron Archives (Web App Cinematográfica)
+  GitHub: https://github.com/andradegali1503-droid/STARS-WARS-BLOG-4GEEKS
+  Stack: React 18, TypeScript, Tailwind CSS, Framer Motion, Vite, SWAPI REST API.
+
+* Óptica Management Pro & Clinical Suite (Sistema Clínico & E-Commerce)
+  GitHub: https://github.com/andradegali1503-droid/optica-beta
+  Stack: Next.js 14 (App Router), React 18, TypeScript, Tailwind CSS, Supabase, GSAP.
+
+* Pokédex Pokémon Esmeralda GBA (Recreación Fiel Game Boy Advance)
+  GitHub: https://github.com/andradegali1503-droid/pokex-gamboy
+  Stack: Angular 18, TypeScript, CSS3 Pixel Art, Web Audio API chiptunes, PokeAPI.
+
+* NovaMarket — Full-Stack Modular E-Commerce (Tienda Digital & Carrito Reactivo)
+  GitHub: https://github.com/ali-ajelandrox/e-commerce-v1
+  Stack: React, Node.js, Express, MongoDB, Firebase Auth/Storage, Bootstrap 5.
 `;

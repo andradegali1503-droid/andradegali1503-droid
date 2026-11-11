@@ -511,10 +511,9 @@ export default function App() {
             <div className="qc-filter-bar" role="tablist" aria-label="Filtrar proyectos por tecnología">
               {[
                 { id: 'todos', label: 'Todos los Proyectos (6)' },
-                { id: 'produccion', label: 'Producción & React/WebGL (2)' },
-                { id: 'bootstrap', label: 'Bootstrap & E-Commerce (1)' },
-                { id: 'flexbox', label: 'CSS Flexbox & Figma (1)' },
-                { id: 'fundamentos', label: 'Catálogos & Fundamentos (2)' }
+                { id: 'fullstack', label: 'Full-Stack Apps (3)' },
+                { id: 'frontend', label: 'Front-End & Retro Apps (2)' },
+                { id: 'produccion', label: 'Producción Web (1)' }
               ].map((cat) => (
                 <button
                   key={cat.id}
