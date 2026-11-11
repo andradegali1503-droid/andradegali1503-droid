@@ -2149,18 +2149,98 @@ svg {
 }
 
 @media (max-width: 680px) {
+  html,
+  body {
+    overflow-x: hidden !important;
+    max-width: 100vw !important;
+  }
+
   .qc-metrics-grid,
   .qc-projects-grid,
   .qc-certs-grid,
   .qc-skills-grid,
   .qc-edu-grid {
     grid-template-columns: 1fr;
+    gap: 1rem;
   }
+
   .qc-topbar-inner {
-    padding: 0.65rem 1rem;
+    padding: 0.55rem 0.85rem;
+    gap: 0.5rem;
   }
+
+  .qc-nav-links {
+    width: 100%;
+    overflow-x: auto;
+    white-space: nowrap;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    padding: 3px 6px;
+  }
+
+  .qc-nav-links::-webkit-scrollbar {
+    display: none;
+  }
+
+  .qc-nav-btn {
+    padding: 0.35rem 0.7rem;
+    font-size: 0.75rem;
+  }
+
   .qc-main {
-    padding: 1.35rem 1rem 3.5rem;
+    padding: 1rem 0.85rem 5.5rem;
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+
+  .qc-hero,
+  .qc-cv-hero-card,
+  .qc-spotlight-card {
+    transform: none !important;
+    border: 2.5px solid var(--text-primary) !important;
+    border-radius: 12px !important;
+    box-shadow: 3.5px 3.5px 0px rgba(13, 19, 31, 0.45) !important;
+    padding: 1.25rem 1rem !important;
+  }
+
+  .qc-metric-box,
+  .qc-metric-box:nth-child(1),
+  .qc-metric-box:nth-child(2),
+  .qc-metric-box:nth-child(3),
+  .qc-metric-box:nth-child(4) {
+    transform: none !important;
+    border: 2px solid var(--text-primary) !important;
+    border-radius: 10px !important;
+    box-shadow: 2.5px 2.5px 0px rgba(13, 19, 31, 0.35) !important;
+    padding: 0.85rem 1rem !important;
+  }
+
+  .qc-portrait-stage {
+    margin: 0 auto !important;
+    justify-self: center !important;
+    max-width: 260px !important;
+  }
+
+  .qc-portrait-card {
+    transform: none !important;
+  }
+
+  .qc-sandbox-dialog,
+  .qc-vault-dialog,
+  .qc-cmd-dialog {
+    width: 96vw !important;
+    max-height: 92vh !important;
+    margin: auto !important;
+    border-radius: 12px !important;
+  }
+
+  .qc-modal-close {
+    min-height: 40px !important;
+    min-width: 40px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    font-size: 0.95rem !important;
   }
 }
 

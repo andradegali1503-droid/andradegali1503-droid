@@ -15,6 +15,7 @@ export default function MangaCVExperience({ onOpenCert, onOpenProject, onOpenTer
   const [activeArc, setActiveArc] = useState('arc1');
   const [cvViewMode, setCvViewMode] = useState('manga'); // 'manga' | 'ats'
   const [copyFeedback, setCopyFeedback] = useState('');
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   // Handle URL params on load (arc, view=ats, scrollY)
   useEffect(() => {
@@ -135,11 +136,51 @@ export default function MangaCVExperience({ onOpenCert, onOpenProject, onOpenTer
 
       {/* 2. Manga Main Editorial Container */}
       <div className="manga-stage-container">
-        {/* ChainZoku-style Topbar: Brand, Centered Floating Pills, Right Social Icons */}
+        {/* ChainZoku-style Topbar: Brand, Centered Floating Pills, Right Social Icons & Mobile Menu */}
         <header className="manga-topbar" role="banner">
-          <div className="manga-topbar-brand">
-            <span className="manga-logo-text">ANDRADE</span>
-            <span className="manga-logo-sub">VOL. 01 // FRONT-END & SYSTEMS</span>
+          <div className="manga-topbar-head">
+            <div
+              className="manga-topbar-brand"
+              onClick={() => scrollToArc('arc1')}
+              role="button"
+              tabIndex={0}
+              onKeyDown={(e) => { if (e.key === 'Enter') scrollToArc('arc1'); }}
+            >
+              <div className="manga-brand-monogram">AA</div>
+              <div className="manga-brand-text-col">
+                <span className="manga-logo-text">ANDRADE</span>
+                <span className="manga-logo-sub">VOL. 01 // FRONT-END & SYSTEMS</span>
+              </div>
+            </div>
+
+            {/* Mobile Actions: WhatsApp Pill & Menu Toggle */}
+            <div className="manga-mobile-actions">
+              <a
+                href={OWNER_PROFILE.whatsappUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="manga-mobile-wa-btn"
+                title="WhatsApp Directo"
+                aria-label="WhatsApp de Ali Andrade"
+              >
+                <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor">
+                  <path d="M12.031 0C5.385 0 0 5.385 0 12.031c0 2.123.554 4.185 1.608 6.008L.062 24l6.123-1.608A11.97 11.97 0 0012.03 24c6.646 0 12.031-5.385 12.031-12.031C24.062 5.385 18.677 0 12.031 0zm0 22.016c-1.846 0-3.646-.492-5.23-1.43l-.369-.216-3.877 1.015 1.03-3.784-.246-.385a10.01 10.01 0 01-1.538-5.185c0-5.523 4.492-10.015 10.015-10.015 5.523 0 10.015 4.492 10.015 10.015 0 5.523-4.492 10.015-10.015 10.015z" />
+                </svg>
+                <span>Chat</span>
+              </a>
+
+              <button
+                type="button"
+                className={`manga-mobile-menu-btn ${mobileMenuOpen ? 'is-active' : ''}`}
+                onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+                aria-label="Abrir menú de navegación"
+                aria-expanded={mobileMenuOpen}
+              >
+                <span className="manga-burger-line" />
+                <span className="manga-burger-line" />
+                <span className="manga-burger-line" />
+              </button>
+            </div>
           </div>
 
           <div className="manga-topbar-center">
@@ -246,6 +287,94 @@ export default function MangaCVExperience({ onOpenCert, onOpenProject, onOpenTer
               <svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 14H4V6h16v12zm-12-3l4-3-4-3v6zm6 0h4v-2h-4v2z"/></svg>
             </button>
           </div>
+
+          {/* Fullscreen / Dropdown Mobile Navigation Drawer */}
+          {mobileMenuOpen && (
+            <div className="manga-mobile-drawer" role="dialog" aria-modal="true" aria-label="Menú principal móvil">
+              <div className="manga-drawer-overlay" onClick={() => setMobileMenuOpen(false)} />
+              <div className="manga-drawer-sheet">
+                <div className="manga-drawer-header">
+                  <div>
+                    <span className="manga-drawer-tag">NAVEGACIÓN</span>
+                    <h3 className="manga-drawer-h3">Índice del Portafolio</h3>
+                  </div>
+                  <button
+                    type="button"
+                    className="manga-drawer-close"
+                    onClick={() => setMobileMenuOpen(false)}
+                    aria-label="Cerrar menú"
+                  >
+                    ✕
+                  </button>
+                </div>
+
+                <nav className="manga-drawer-nav">
+                  {[
+                    { id: 'arc1', num: '01', title: 'Portada & Perfil Profesional' },
+                    { id: 'arc2', num: '02', title: 'El Origen & Dualidad Técnica' },
+                    { id: 'arc3', num: '03', title: 'Crónicas de Experiencia (Jumps 1-6)' },
+                    { id: 'arc4', num: '04', title: 'El Arsenal Técnico & Oficios' },
+                    { id: 'arc5', num: '05', title: 'Historias de Proyectos & Demos' },
+                    { id: 'arc6', num: '06', title: 'Formación & Bóveda de Diplomas' },
+                    { id: 'arc7', num: '07', title: 'Contacto & Transmisión Final' }
+                  ].map((item) => (
+                    <button
+                      key={item.id}
+                      type="button"
+                      className={`manga-drawer-link ${activeArc === item.id && cvViewMode === 'manga' ? 'is-active' : ''}`}
+                      onClick={() => {
+                        setCvViewMode('manga');
+                        scrollToArc(item.id);
+                        setMobileMenuOpen(false);
+                      }}
+                    >
+                      <span className="manga-drawer-num">{item.num}</span>
+                      <span className="manga-drawer-title">{item.title}</span>
+                    </button>
+                  ))}
+
+                  <button
+                    type="button"
+                    className={`manga-drawer-link manga-drawer-link-ats ${cvViewMode === 'ats' ? 'is-active' : ''}`}
+                    onClick={() => {
+                      setCvViewMode(cvViewMode === 'ats' ? 'manga' : 'ats');
+                      setMobileMenuOpen(false);
+                    }}
+                  >
+                    <span className="manga-drawer-num">⚡</span>
+                    <span className="manga-drawer-title">Modo Texto Plano ATS (Para Portales)</span>
+                  </button>
+                </nav>
+
+                <div className="manga-drawer-footer">
+                  <div className="manga-drawer-actions">
+                    <button
+                      type="button"
+                      className="manga-btn-secondary"
+                      onClick={() => { window.print(); setMobileMenuOpen(false); }}
+                    >
+                      Descargar CV en PDF (A4) ⎙
+                    </button>
+                    <a
+                      href={OWNER_PROFILE.whatsappUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="manga-btn-primary"
+                      onClick={() => setMobileMenuOpen(false)}
+                    >
+                      Escribir por WhatsApp ↗
+                    </a>
+                  </div>
+                  <div className="manga-drawer-socials">
+                    <a href={OWNER_PROFILE.githubReposUrl} target="_blank" rel="noopener noreferrer">GitHub</a>
+                    <a href={OWNER_PROFILE.linkedinUrl} target="_blank" rel="noopener noreferrer">LinkedIn</a>
+                    <a href={`mailto:${OWNER_PROFILE.emailPrimary}`}>Email</a>
+                    <a href={`tel:${OWNER_PROFILE.phoneRaw}`}>Teléfono</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          )}
         </header>
 
         {copyFeedback && (
@@ -802,6 +931,53 @@ export default function MangaCVExperience({ onOpenCert, onOpenProject, onOpenTer
           <span className="manga-play-text">ATS</span>
         </button>
       </div>
+
+      {/* 4. Floating Mobile Quick Action Bar (Bottom Thumb Ergonomics) */}
+      <nav className="manga-mobile-quickbar" aria-label="Contacto rápido móvil">
+        <a
+          href={OWNER_PROFILE.whatsappUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="manga-quickbar-btn manga-quickbar-whatsapp"
+          aria-label="Contactar por WhatsApp"
+        >
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor">
+            <path d="M12.031 0C5.385 0 0 5.385 0 12.031c0 2.123.554 4.185 1.608 6.008L.062 24l6.123-1.608A11.97 11.97 0 0012.03 24c6.646 0 12.031-5.385 12.031-12.031C24.062 5.385 18.677 0 12.031 0zm0 22.016c-1.846 0-3.646-.492-5.23-1.43l-.369-.216-3.877 1.015 1.03-3.784-.246-.385a10.01 10.01 0 01-1.538-5.185c0-5.523 4.492-10.015 10.015-10.015 5.523 0 10.015 4.492 10.015 10.015 0 5.523-4.492 10.015-10.015 10.015z" />
+          </svg>
+          <span>WhatsApp</span>
+        </a>
+        <a
+          href={`tel:${OWNER_PROFILE.phoneRaw}`}
+          className="manga-quickbar-btn"
+          aria-label="Llamar directamente"
+        >
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor">
+            <path d="M6.62 10.79a15.053 15.053 0 006.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z" />
+          </svg>
+          <span>Llamar</span>
+        </a>
+        <a
+          href={`mailto:${OWNER_PROFILE.emailPrimary}`}
+          className="manga-quickbar-btn"
+          aria-label="Enviar correo electrónico"
+        >
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor">
+            <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z" />
+          </svg>
+          <span>Email</span>
+        </a>
+        <button
+          type="button"
+          onClick={() => window.print()}
+          className="manga-quickbar-btn manga-quickbar-cv"
+          aria-label="Descargar CV en PDF"
+        >
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor">
+            <path d="M19 8H5c-1.66 0-3 1.34-3 3v6h4v4h12v-4h4v-6c0-1.66-1.34-3-3-3zm-3 11H8v-5h8v5zm3-7c-.55 0-1-.45-1-1s.45-1 1-1 1 .45 1 1-.45 1-1 1zm-1-9H6v4h12V3z" />
+          </svg>
+          <span>CV PDF</span>
+        </button>
+      </nav>
     </div>
   );
 }
